@@ -6898,8 +6898,8 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_1' THEN
     
  ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
@@ -6907,8 +6907,8 @@ and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
   OR 
 ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.close_reason = 'died'
@@ -6930,8 +6930,8 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_2' THEN
 
      ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.cause_of_death = 'neonatal_death_at_hp'
@@ -6939,8 +6939,8 @@ and  p_record_x.cause_of_death = 'neonatal_death_at_hp'
   OR 
 ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.close_reason = 'died'
@@ -6962,8 +6962,8 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_3' THEN
     IF 
      ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
@@ -6971,8 +6971,8 @@ and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
   OR 
 ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.close_reason = 'died'
@@ -6996,8 +6996,8 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_1_1' THEN
     IF 
      ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
@@ -7005,8 +7005,8 @@ and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
   OR 
 ( p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.close_reason = 'died'
@@ -7032,12 +7032,12 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_1_2' THEN
       ( p_record_x.closed = 'True' and 
 (
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) >= 1
 and EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 )
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
@@ -7053,12 +7053,12 @@ or  p_record_x.cause_of_death = 'neonatal_death_institutional'
 ( p_record_x.closed = 'True' and 
 (
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) >= 1
 and EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 )
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
@@ -7084,8 +7084,8 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_1' THEN
 
 p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 1
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 
@@ -7102,8 +7102,8 @@ OR
 
 p_record_x.closed = 'True' and 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 1
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
 and  p_record_x.close_reason = 'died'
@@ -7125,13 +7125,13 @@ OR
 p_record_x.closed = 'True' and 
 (
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) >= 1
 AND 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 
 )
@@ -7151,13 +7151,13 @@ or
 p_record_x.closed = 'True' and 
 (
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) >= 1
 AND 
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 
 )
@@ -7181,12 +7181,12 @@ and  p_record_x.death_neonatal = 'yes'
       ( p_record_x.closed = 'True' and 
 (
 EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) >= 1
 and EXTRACT(day FROM AGE(
-p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
+p_record_x.dob::DATE
 )) <= 7
 )
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
@@ -7203,11 +7203,11 @@ or  p_record_x.cause_of_death = 'neonatal_death_institutional'
 (
 EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
-p_record_x.death_date::DATE, 
+
 )) >= 1
 and EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
-p_record_x.death_date::DATE, 
+
 )) <= 7
 )
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
