@@ -2039,7 +2039,7 @@ ELSIF p_indic_name = 'indic_number_of_under_5__pnemonia' THEN
  
      EXTRACT(MONTH FROM AGE(
                 p_record_x.illness_start_date::DATE, 
-                p_record_x.dob::DATE ) < 60
+                p_record_x.dob::DATE ) <= 60
                 and 
         p_record_x.current_classification like '%pneumonia%'
         and 
@@ -2050,7 +2050,13 @@ ELSIF p_indic_name = 'indic_number_of_under_5__pnemonia' THEN
 -- CHIM_VSD.1:Child Health:Number of sick young infants 0-2 months treated for sepsis
 ELSIF p_indic_name = 'indic_CHIM_VSD_1' THEN
     IF 
-     p_record_x.age_months = '2'
+   
+     EXTRACT(MONTH FROM AGE(
+                p_record_x.illness_start_date::DATE, 
+                p_record_x.dob::DATE ) <= 60
+                and 
+        p_record_x.current_classification like '%vsd%'
+        and 
     
     THEN   
         CHIM_VSD_1 := 1;
@@ -2059,7 +2065,13 @@ ELSIF p_indic_name = 'indic_CHIM_VSD_1' THEN
 -- CHIM_VSD.2:Child Health:Number of sick young infants 0-2 months treated for local bacterial infection(LBI)
 ELSIF p_indic_name = 'indic_CHIM_VSD_2' THEN
     IF 
-     p_record_x.age_months = '2'
+    
+     EXTRACT(MONTH FROM AGE(
+                p_record_x.illness_start_date::DATE, 
+                p_record_x.dob::DATE ) < 60
+                and 
+        p_record_x.current_classification like '%local_bacterial_infection%'
+        and 
     
     THEN   
         CHIM_VSD_2 := 1;
@@ -2112,8 +2124,21 @@ ELSIF p_indic_name = 'indic_nch_chim_pnrx' THEN
 -- NCH_CHIM_AsfxRS.2:Asphyxiated neonates who were resuscitated (with bag & mask) and survived
 ELSIF p_indic_name = 'indic_nch_chim_asfxrs' THEN
     IF 
-     p_record_x.case_type = 'client'
-     AND p_record_x.asphyxiated_neonate = 'yes'
+    (
+        p_record_x.current_classification like '%severe_dehydration%' OR 
+        p_record_x.current_classification like '%some_dehydration%' or
+        p_record_x.current_classification like '%no_dehydration%' 
+        )
+        
+         AND 
+         (
+        p_record_x.all_med_names like '%ors%' or 
+        p_record_x.all_med_names like '%ors_planb%' or
+            p_record_x.all_med_names like '%zink%' 
+        
+         )  
+     and 
+   p_record_x.asphyxiated_neonate = 'yes'
     
     THEN   
         nch_chim_asfxrs := 1;
@@ -2319,9 +2344,14 @@ ELSIF p_indic_name = 'indic_CH_CND_LB_kebele_' THEN
 -- Number of sick young infants 0-2 months treated for Critical illness - Treated for Pneumonia(CH_TX_SYI.1. 3):Child Health 
 ELSIF p_indic_name = 'indic_CH_TX_SYI_1_3' THEN
     IF 
-     p_record_x.illness_type = 'cbnc'
-     AND p_record_x.closed = 'False'
-     AND p_record_x.hew_screening_classification = 'pneumonia'
+  
+      p_record_x.closed = 'False' 
+      AND  p_record_x.current_classification like '%pneumonia%'
+AND
+          EXTRACT(MONTH FROM AGE(
+                p_record_x.illness_start_date::DATE, 
+                p_record_x.dob::DATE ) < 60
+                  
     
     THEN   
         CH_TX_SYI_1_3 := 1;
@@ -2329,7 +2359,20 @@ ELSIF p_indic_name = 'indic_CH_TX_SYI_1_3' THEN
    
 -- Asphyxiated neonates who were resuscitated (with bag & mask) and survived - Total number of neonates resuscitated(CH_ASPH.2.):Child Health 
 ELSIF p_indic_name = 'indic_CH_ASPH_2_' THEN
-    IF 
+    IF (
+        p_record_x.current_classification like '%severe_dehydration%' OR 
+        p_record_x.current_classification like '%some_dehydration%' or
+        p_record_x.current_classification like '%no_dehydration%' 
+        )
+        
+         AND 
+         (
+        p_record_x.all_med_names like '%ors%' or 
+        p_record_x.all_med_names like '%ors_planb%' or
+            p_record_x.all_med_names like '%zink%' 
+        
+         )  
+     and 
      p_record_x.asphyxiated_neonate = 'yes'
     
     THEN   
@@ -2339,8 +2382,24 @@ ELSIF p_indic_name = 'indic_CH_ASPH_2_' THEN
 -- Newborns that received at least one dose of CHX to the cord on the first day after birth - Number of Newborns that received at least one dose of CHX to the cord on the first day after birth(CH_CHX.1.):Child Health 
 ELSIF p_indic_name = 'indic_CH_CHX_1_' THEN
     IF 
-     p_record_x.received_chlorhexidine = 'yes'
-    
+     (
+        p_record_x.current_classification like '%severe_dehydration%' OR 
+        p_record_x.current_classification like '%some_dehydration%' or
+        p_record_x.current_classification like '%no_dehydration%' 
+        )
+        
+         AND 
+         (
+        p_record_x.all_med_names like '%ors%' or 
+        p_record_x.all_med_names like '%ors_planb%' or
+            p_record_x.all_med_names like '%zink%' 
+        
+         )  
+     and 
+     p_record_x.received_chlorhexidine = 'yes' and
+     EXTRACT(day FROM AGE(
+                p_record_x.illness_start_date::DATE, 
+                p_record_x.dob::DATE ) <= 1
     THEN   
         CH_CHX_1_ := 1;
     END IF;
@@ -7208,10 +7267,12 @@ or  p_record_x.cause_of_death = 'neonatal_death_institutional'
 (
 EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
+p_record_x.dob::DATE
 
 )) >= 1
 and EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
+p_record_x.dob::DATE
 
 )) <= 7
 )
@@ -7225,6 +7286,45 @@ and  p_record_x.death_neonatal = 'yes'
         CHIM_ECND_1 := 1;
     END IF;
    
+
+ELSIF p_indic_name = 'indic_children_who_treated_for_diarrhea_by_ors_and_zinc' THEN
+
+    IF (
+        p_record_x.current_classification like '%some_dehydration%' OR 
+        p_record_x.current_classification like '%no_dehydration%')
+        
+         AND 
+         (
+        p_record_x.all_med_names like '%ors%' or 
+        p_record_x.all_med_names like '%ors_planb%' ) AND 
+        p_record_x.all_med_names like '%zink%' 
+
+    
+    THEN   
+
+        children_who_treated_for_diarrhea_by_ors_and_zinc := 1;
+    END IF;
+   
+-- CHIM_DhRX.2:Child Health:Treated by ORS only
+ELSIF p_indic_name = 'indic_children_who_treated_for_diarrhea_by_ors' THEN
+
+    IF (
+        p_record_x.current_classification like '%severe_dehydration%' OR 
+        p_record_x.current_classification like '%some_dehydration%' or
+        p_record_x.current_classification like '%no_dehydration%' 
+        )
+        
+         AND 
+         (
+        p_record_x.all_med_names like '%ors%' or 
+        p_record_x.all_med_names like '%ors_planb%' )  
+     
+    
+    THEN   
+
+        children_who_treated_for_diarrhea_by_ors := 1;
+    END IF;
+
 
 
 
