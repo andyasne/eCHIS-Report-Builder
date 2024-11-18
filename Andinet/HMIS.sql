@@ -6895,7 +6895,7 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_1' THEN
     IF 
     
  ( p_record_x.closed = 'True' and 
-EXTRACT(month FROM AGE(
+EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
 )) <= 7
@@ -6904,19 +6904,17 @@ and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
   )
   OR 
 ( p_record_x.closed = 'True' and 
-EXTRACT(month FROM AGE(
+EXTRACT(day FROM AGE(
 p_record_x.dob::DATE, 
 p_record_x.death_date::DATE, 
 )) <= 7
 AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
-and  p_record_x.cause_of_death = 'died'
+and  p_record_x.close_reason = 'died'
 and  p_record_x.death_early_neonatal = 'yes'
-and  p_record_x.death_neonatal = 'yes' and 
-(
-p_record_x.death_location = 'en_route_hc'
-or  p_record_x.death_location = 'en_route_hp'
+and  
 
-    )
+p_record_x.death_location = 'community'
+ 
   )
     THEN   
    
@@ -6927,6 +6925,29 @@ or  p_record_x.death_location = 'en_route_hp'
 ELSIF p_indic_name = 'indic_CHIM_ECND_2_2' THEN
        
     IF 
+
+     ( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.cause_of_death = 'neonatal_death_at_hp'
+  )
+  OR 
+( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes' and 
+
+p_record_x.death_location = 'health_post'
+ 
+  )
     
     THEN   
    
@@ -6937,6 +6958,30 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_2' THEN
 ELSIF p_indic_name = 'indic_CHIM_ECND_2_3' THEN
        
     IF 
+     ( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+  )
+  OR 
+( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes' and 
+(
+p_record_x.death_location = 'en_route_hc'
+or 
+p_record_x.death_location = 'en_route_hp'
+ 
+  )
     
     THEN   
    
@@ -6947,6 +6992,31 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_2_3' THEN
 ELSIF p_indic_name = 'indic_CHIM_ECND_1_1' THEN
        
     IF 
+     ( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+  )
+  OR 
+( p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes' and 
+(
+p_record_x.death_location = 'en_route_hc'
+or 
+p_record_x.death_location = 'en_route_hp'
+ 
+  )
+    
     
     THEN   
    
@@ -6957,7 +7027,42 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_1_1' THEN
 ELSIF p_indic_name = 'indic_CHIM_ECND_1_2' THEN
        
     IF 
-    
+      ( p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+and EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+
+and  (  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+or  p_record_x.cause_of_death = 'neonatal_death_at_home'
+or  p_record_x.cause_of_death = 'neonatal_death_at_hp'
+or  p_record_x.cause_of_death = 'neonatal_death_institutional'
+)
+
+  )
+  OR 
+( p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+and EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes'  
     THEN   
    
         CHIM_ECND_1_2 := 1;
@@ -6965,8 +7070,148 @@ ELSIF p_indic_name = 'indic_CHIM_ECND_1_2' THEN
    
 -- CHIM_ECND.1:Child Health:Early neonatal death at community dis aggregated by time of death
 ELSIF p_indic_name = 'indic_CHIM_ECND_1' THEN
+
+
+
+
        
-    IF 
+     IF 
+(
+(
+
+
+p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 1
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+
+and  (  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+or  p_record_x.cause_of_death = 'neonatal_death_at_home'
+or  p_record_x.cause_of_death = 'neonatal_death_at_hp'
+or  p_record_x.cause_of_death = 'neonatal_death_institutional'
+)
+    
+)
+OR
+(
+
+
+p_record_x.closed = 'True' and 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 1
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes'  
+
+ 
+
+    
+)
+
+
+)
+OR
+(
+(
+
+
+p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+AND 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+
+and  (  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+or  p_record_x.cause_of_death = 'neonatal_death_at_home'
+or  p_record_x.cause_of_death = 'neonatal_death_at_hp'
+or  p_record_x.cause_of_death = 'neonatal_death_institutional'
+)
+    
+)
+or
+(
+
+
+p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+AND 
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes'  
+
+ 
+
+    
+)
+
+
+)
+
+
+
+
+
+      ( p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+and EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+
+and  (  p_record_x.cause_of_death = 'neonatal_death_on_the_way_to_hf'
+or  p_record_x.cause_of_death = 'neonatal_death_at_home'
+or  p_record_x.cause_of_death = 'neonatal_death_at_hp'
+or  p_record_x.cause_of_death = 'neonatal_death_institutional'
+)
+
+  )
+  OR 
+( p_record_x.closed = 'True' and 
+(
+EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) >= 1
+and EXTRACT(day FROM AGE(
+p_record_x.dob::DATE, 
+p_record_x.death_date::DATE, 
+)) <= 7
+)
+AND COALESCE(p_record_x.pregnancy_pp_case_id, '') <> ''
+and  p_record_x.close_reason = 'died'
+and  p_record_x.death_early_neonatal = 'yes'
+and  p_record_x.death_neonatal = 'yes'   
     
     THEN   
    
