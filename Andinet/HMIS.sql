@@ -2304,6 +2304,8 @@ ELSIF p_indic_name = 'indic_CH_CND_LB_kebele_' THEN
     IF 
      p_record_x.closed = 'False'
      AND p_record_x.outcome_maternal = 'delivery'
+     AND COALESCE(p_record_x.num_still_birth, '') <> ''
+
     
     THEN   
         CH_CND_LB_kebele_ := 1;
