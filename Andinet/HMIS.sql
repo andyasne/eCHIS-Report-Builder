@@ -2036,8 +2036,13 @@ ELSIF p_indic_name = 'indic_L_D_SBA_1' THEN
 -- CHIM_PnRX.1:Child Health:Number of under 5 children treated for pneumonia
 ELSIF p_indic_name = 'indic_number_of_under_5__pnemonia' THEN
     IF 
-     p_record_x.age_months = '60'
-    
+ 
+     EXTRACT(MONTH FROM AGE(
+                p_record_x.illness_start_date::DATE, 
+                p_record_x.dob::DATE ) < 60
+                and 
+        p_record_x.current_classification like '%pneumonia%'
+        and 
     THEN   
         number_of_under_5__pnemonia := 1;
     END IF;
