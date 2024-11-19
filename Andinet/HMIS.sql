@@ -1504,8 +1504,11 @@ ELSIF p_indic_name = 'indic_number_of_pregnant_received_anc_first_visit' THEN
 ELSIF p_indic_name = 'indic_number_of_children_under_one_yr_received_bcg' THEN
     
  
-    IF p_record_x.bcg_date IS NOT NULL AND p_record_x.bcg_date <> ''
-     AND p_record_x.case_type = 'client'
+    IF 
+    
+      EXTRACT(MONTH FROM AGE(
+                p_record_x.bcg_date::DATE, 
+                p_record_x.dob::DATE ) <= 12
     
     THEN   
         number_of_children_under_one_yr_received_bcg := 1;
