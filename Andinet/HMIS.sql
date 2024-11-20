@@ -508,61 +508,61 @@ or replace function public.rpt_fn_compute_hmis_report_values(
  NUT_U5SMN_SAM_1_1  integer,
  NUT_U5SMN_SAM_1_2  integer,
  NUT_U5SMN_SAM_1_3  integer,
- NUT_TX-U5MN_SAM_Beging_SC_1_1  integer,
- NUT_TX-U5MN_SAM_Beging_SC_1_2  integer,
- NUT_TX-U5MN_SAM_Beging_SC_1_3  integer,
- NUT_TX-U5MN_SAM__Adt_SC_2_1  integer,
- NUT_TX-U5MN_SAM__Adt_SC_2_2  integer,
- NUT_TX-U5MN_SAM__Adt_SC_2_3  integer,
- NUT_TX-U5MN_SAM_Stab_SC_3_1  integer,
- NUT_TX-U5MN_SAM_Stab_SC_3_2  integer,
- NUT_TX-U5MN_SAM_Stab_SC_3_3  integer,
- NUT_TX-U5MN_SAM_Cur_SC_4_1  integer,
- NUT_TX-U5MN_SAM_Cur_SC_4_2  integer,
- NUT_TX-U5MN_SAM_Cur_SC_4_3  integer,
- NUT_TX-U5MN_SAM_died_SC_5_1  integer,
- NUT_TX-U5MN_SAM_died_SC_5_2  integer,
- NUT_TX-U5MN_SAM_died_SC_5_3  integer,
- NUT_TX-U5MN_SAM_TO_SC_6_1  integer,
- NUT_TX-U5MN_SAM_TO_SC_6_2  integer,
- NUT_TX-U5MN_SAM_TO_SC_6_3  integer,
- NUT_TX-U5MN_SAM_Def_SC_7_1  integer,
- NUT_TX-U5MN_SAM_Def_SC_7_2  integer,
- NUT_TX-U5MN_SAM_Def_SC_7_3  integer,
- NUT_TX-U5MN_SAM_NR_SC_8_1  integer,
- NUT_TX-U5MN_SAM_NR_SC_8_2  integer,
- NUT_TX-U5MN_SAM_NR_SC_8_3  integer,
- NUT_TX-U5MN_SAM_Ext_SC_9_1  integer,
- NUT_TX-U5MN_SAM_Ext_SC_9_2  integer,
- NUT_TX-U5MN_SAM_Ext_SC_9_3  integer,
- NUT_TX-U5MN_SAM_OTP  integer,
- NUT_TX-U5MN_SAM_Adt_OTP  integer,
- NUT_TX-U5MN_SAM_Cur_OTP_1  integer,
- NUT_TX-U5MN_SAM_died_OTP_2  integer,
- NUT_TX-U5MN_SAM_TO_OTP_3  integer,
- NUT_TX-U5MN_SAM_Def_OTP_4  integer,
- NUT_TX-U5MN_SAM_NR_OTP_5  integer,
- NUT_TX-U5MN_SAM_Ext_OTP_E  integer,
- NUT_TX-U5MN__MAM_Beging_OTP  integer,
- NUT_TX-U5MN_MAM_Adt_TSFP  integer,
- xxNUT_TX-U5MN_MAM_Adt_TSFP  integer,
- NUT_TX-U5MN_SAM_Cur_TSFP_1  integer,
- NUT_TX-U5MN_SAM_died_TSFP_2  integer,
- NUT_TX-U5MN_SAM_TO_TSFP_3  integer,
- NUT_TX-U5MN_SAM_Def_TSFP_4  integer,
- NUT_TX-U5MN_SAM_NR_TSFP_5  integer,
- NUT_TX-U5MN__SAM_Ext_TSFP_E  integer,
- NUT_TX-U5MN_MAM_Beging_OTP  integer,
- NUT_TX-U5MN_MAM_Adt_OTP  integer,
- NUT_TX-U5MN_Cur_TSFP_1  integer,
- NUT_TX-U5MN_died_TSFP_2  integer,
- NUT_TX-U5MN_TO_TSFP_3  integer,
- NUT_TX-U5MN__Def_TSFP_4  integer,
- NUT_TX-U5MN_MAM__NR_TSFP_5  integer,
- NUT_TX-U5MN_MAM-Ext_TSFP_E  integer,
+ NUT_TX_U5MN_SAM_Beging_SC_1_1  integer,
+ NUT_TX_U5MN_SAM_Beging_SC_1_2  integer,
+ NUT_TX_U5MN_SAM_Beging_SC_1_3  integer,
+ NUT_TX_U5MN_SAM__Adt_SC_2_1  integer,
+ NUT_TX_U5MN_SAM__Adt_SC_2_2  integer,
+ NUT_TX_U5MN_SAM__Adt_SC_2_3  integer,
+ NUT_TX_U5MN_SAM_Stab_SC_3_1  integer,
+ NUT_TX_U5MN_SAM_Stab_SC_3_2  integer,
+ NUT_TX_U5MN_SAM_Stab_SC_3_3  integer,
+ NUT_TX_U5MN_SAM_Cur_SC_4_1  integer,
+ NUT_TX_U5MN_SAM_Cur_SC_4_2  integer,
+ NUT_TX_U5MN_SAM_Cur_SC_4_3  integer,
+ NUT_TX_U5MN_SAM_died_SC_5_1  integer,
+ NUT_TX_U5MN_SAM_died_SC_5_2  integer,
+ NUT_TX_U5MN_SAM_died_SC_5_3  integer,
+ NUT_TX_U5MN_SAM_TO_SC_6_1  integer,
+ NUT_TX_U5MN_SAM_TO_SC_6_2  integer,
+ NUT_TX_U5MN_SAM_TO_SC_6_3  integer,
+ NUT_TX_U5MN_SAM_Def_SC_7_1  integer,
+ NUT_TX_U5MN_SAM_Def_SC_7_2  integer,
+ NUT_TX_U5MN_SAM_Def_SC_7_3  integer,
+ NUT_TX_U5MN_SAM_NR_SC_8_1  integer,
+ NUT_TX_U5MN_SAM_NR_SC_8_2  integer,
+ NUT_TX_U5MN_SAM_NR_SC_8_3  integer,
+ NUT_TX_U5MN_SAM_Ext_SC_9_1  integer,
+ NUT_TX_U5MN_SAM_Ext_SC_9_2  integer,
+ NUT_TX_U5MN_SAM_Ext_SC_9_3  integer,
+ NUT_TX_U5MN_SAM_OTP  integer,
+ NUT_TX_U5MN_SAM_Adt_OTP  integer,
+ NUT_TX_U5MN_SAM_Cur_OTP_1  integer,
+ NUT_TX_U5MN_SAM_died_OTP_2  integer,
+ NUT_TX_U5MN_SAM_TO_OTP_3  integer,
+ NUT_TX_U5MN_SAM_Def_OTP_4  integer,
+ NUT_TX_U5MN_SAM_NR_OTP_5  integer,
+ NUT_TX_U5MN_SAM_Ext_OTP_E  integer,
+ NUT_TX_U5MN__MAM_Beging_OTP  integer,
+ NUT_TX_U5MN_MAM_Adt_TSFP  integer,
+ 
+ NUT_TX_U5MN_SAM_Cur_TSFP_1  integer,
+ NUT_TX_U5MN_SAM_died_TSFP_2  integer,
+ NUT_TX_U5MN_SAM_TO_TSFP_3  integer,
+ NUT_TX_U5MN_SAM_Def_TSFP_4  integer,
+ NUT_TX_U5MN_SAM_NR_TSFP_5  integer,
+ NUT_TX_U5MN__SAM_Ext_TSFP_E  integer,
+ NUT_TX_U5MN_MAM_Beging_OTP  integer,
+ NUT_TX_U5MN_MAM_Adt_OTP  integer,
+ NUT_TX_U5MN_Cur_TSFP_1  integer,
+ NUT_TX_U5MN_died_TSFP_2  integer,
+ NUT_TX_U5MN_TO_TSFP_3  integer,
+ NUT_TX_U5MN__Def_TSFP_4  integer,
+ NUT_TX_U5MN_MAM__NR_TSFP_5  integer,
+ NUT_TX_U5MN_MAM_Ext_TSFP_E  integer,
  NUT_DeW_Numerator  integer,
- NUT_TX-U5MN_SAM_us_OTP_8_  integer,
- NUT_TX-U5MN_SAM_US_TSFP_8_  integer
+ NUT_TX_U5MN_SAM_us_OTP_8_  integer,
+ NUT_TX_U5MN_SAM_US_TSFP_8_  integer
 
 
 ) language plpgsql as
@@ -1997,61 +1997,61 @@ EPI_VWR_Penta_giv_:= 0;
  NUT_U5SMN_SAM_1_1 := 0;
  NUT_U5SMN_SAM_1_2 := 0;
  NUT_U5SMN_SAM_1_3 := 0;
- NUT_TX-U5MN_SAM_Beging_SC_1_1 := 0;
- NUT_TX-U5MN_SAM_Beging_SC_1_2 := 0;
- NUT_TX-U5MN_SAM_Beging_SC_1_3 := 0;
- NUT_TX-U5MN_SAM__Adt_SC_2_1 := 0;
- NUT_TX-U5MN_SAM__Adt_SC_2_2 := 0;
- NUT_TX-U5MN_SAM__Adt_SC_2_3 := 0;
- NUT_TX-U5MN_SAM_Stab_SC_3_1 := 0;
- NUT_TX-U5MN_SAM_Stab_SC_3_2 := 0;
- NUT_TX-U5MN_SAM_Stab_SC_3_3 := 0;
- NUT_TX-U5MN_SAM_Cur_SC_4_1 := 0;
- NUT_TX-U5MN_SAM_Cur_SC_4_2 := 0;
- NUT_TX-U5MN_SAM_Cur_SC_4_3 := 0;
- NUT_TX-U5MN_SAM_died_SC_5_1 := 0;
- NUT_TX-U5MN_SAM_died_SC_5_2 := 0;
- NUT_TX-U5MN_SAM_died_SC_5_3 := 0;
- NUT_TX-U5MN_SAM_TO_SC_6_1 := 0;
- NUT_TX-U5MN_SAM_TO_SC_6_2 := 0;
- NUT_TX-U5MN_SAM_TO_SC_6_3 := 0;
- NUT_TX-U5MN_SAM_Def_SC_7_1 := 0;
- NUT_TX-U5MN_SAM_Def_SC_7_2 := 0;
- NUT_TX-U5MN_SAM_Def_SC_7_3 := 0;
- NUT_TX-U5MN_SAM_NR_SC_8_1 := 0;
- NUT_TX-U5MN_SAM_NR_SC_8_2 := 0;
- NUT_TX-U5MN_SAM_NR_SC_8_3 := 0;
- NUT_TX-U5MN_SAM_Ext_SC_9_1 := 0;
- NUT_TX-U5MN_SAM_Ext_SC_9_2 := 0;
- NUT_TX-U5MN_SAM_Ext_SC_9_3 := 0;
- NUT_TX-U5MN_SAM_OTP := 0;
- NUT_TX-U5MN_SAM_Adt_OTP := 0;
- NUT_TX-U5MN_SAM_Cur_OTP_1 := 0;
- NUT_TX-U5MN_SAM_died_OTP_2 := 0;
- NUT_TX-U5MN_SAM_TO_OTP_3 := 0;
- NUT_TX-U5MN_SAM_Def_OTP_4 := 0;
- NUT_TX-U5MN_SAM_NR_OTP_5 := 0;
- NUT_TX-U5MN_SAM_Ext_OTP_E := 0;
- NUT_TX-U5MN__MAM_Beging_OTP := 0;
- NUT_TX-U5MN_MAM_Adt_TSFP := 0;
- xxNUT_TX-U5MN_MAM_Adt_TSFP := 0;
- NUT_TX-U5MN_SAM_Cur_TSFP_1 := 0;
- NUT_TX-U5MN_SAM_died_TSFP_2 := 0;
- NUT_TX-U5MN_SAM_TO_TSFP_3 := 0;
- NUT_TX-U5MN_SAM_Def_TSFP_4 := 0;
- NUT_TX-U5MN_SAM_NR_TSFP_5 := 0;
- NUT_TX-U5MN__SAM_Ext_TSFP_E := 0;
- NUT_TX-U5MN_MAM_Beging_OTP := 0;
- NUT_TX-U5MN_MAM_Adt_OTP := 0;
- NUT_TX-U5MN_Cur_TSFP_1 := 0;
- NUT_TX-U5MN_died_TSFP_2 := 0;
- NUT_TX-U5MN_TO_TSFP_3 := 0;
- NUT_TX-U5MN__Def_TSFP_4 := 0;
- NUT_TX-U5MN_MAM__NR_TSFP_5 := 0;
- NUT_TX-U5MN_MAM-Ext_TSFP_E := 0;
+ NUT_TX_U5MN_SAM_Beging_SC_1_1 := 0;
+ NUT_TX_U5MN_SAM_Beging_SC_1_2 := 0;
+ NUT_TX_U5MN_SAM_Beging_SC_1_3 := 0;
+ NUT_TX_U5MN_SAM__Adt_SC_2_1 := 0;
+ NUT_TX_U5MN_SAM__Adt_SC_2_2 := 0;
+ NUT_TX_U5MN_SAM__Adt_SC_2_3 := 0;
+ NUT_TX_U5MN_SAM_Stab_SC_3_1 := 0;
+ NUT_TX_U5MN_SAM_Stab_SC_3_2 := 0;
+ NUT_TX_U5MN_SAM_Stab_SC_3_3 := 0;
+ NUT_TX_U5MN_SAM_Cur_SC_4_1 := 0;
+ NUT_TX_U5MN_SAM_Cur_SC_4_2 := 0;
+ NUT_TX_U5MN_SAM_Cur_SC_4_3 := 0;
+ NUT_TX_U5MN_SAM_died_SC_5_1 := 0;
+ NUT_TX_U5MN_SAM_died_SC_5_2 := 0;
+ NUT_TX_U5MN_SAM_died_SC_5_3 := 0;
+ NUT_TX_U5MN_SAM_TO_SC_6_1 := 0;
+ NUT_TX_U5MN_SAM_TO_SC_6_2 := 0;
+ NUT_TX_U5MN_SAM_TO_SC_6_3 := 0;
+ NUT_TX_U5MN_SAM_Def_SC_7_1 := 0;
+ NUT_TX_U5MN_SAM_Def_SC_7_2 := 0;
+ NUT_TX_U5MN_SAM_Def_SC_7_3 := 0;
+ NUT_TX_U5MN_SAM_NR_SC_8_1 := 0;
+ NUT_TX_U5MN_SAM_NR_SC_8_2 := 0;
+ NUT_TX_U5MN_SAM_NR_SC_8_3 := 0;
+ NUT_TX_U5MN_SAM_Ext_SC_9_1 := 0;
+ NUT_TX_U5MN_SAM_Ext_SC_9_2 := 0;
+ NUT_TX_U5MN_SAM_Ext_SC_9_3 := 0;
+ NUT_TX_U5MN_SAM_OTP := 0;
+ NUT_TX_U5MN_SAM_Adt_OTP := 0;
+ NUT_TX_U5MN_SAM_Cur_OTP_1 := 0;
+ NUT_TX_U5MN_SAM_died_OTP_2 := 0;
+ NUT_TX_U5MN_SAM_TO_OTP_3 := 0;
+ NUT_TX_U5MN_SAM_Def_OTP_4 := 0;
+ NUT_TX_U5MN_SAM_NR_OTP_5 := 0;
+ NUT_TX_U5MN_SAM_Ext_OTP_E := 0;
+ NUT_TX_U5MN__MAM_Beging_OTP := 0;
+ NUT_TX_U5MN_MAM_Adt_TSFP := 0;
+ 
+ NUT_TX_U5MN_SAM_Cur_TSFP_1 := 0;
+ NUT_TX_U5MN_SAM_died_TSFP_2 := 0;
+ NUT_TX_U5MN_SAM_TO_TSFP_3 := 0;
+ NUT_TX_U5MN_SAM_Def_TSFP_4 := 0;
+ NUT_TX_U5MN_SAM_NR_TSFP_5 := 0;
+ NUT_TX_U5MN__SAM_Ext_TSFP_E := 0;
+ NUT_TX_U5MN_MAM_Beging_OTP := 0;
+ NUT_TX_U5MN_MAM_Adt_OTP := 0;
+ NUT_TX_U5MN_Cur_TSFP_1 := 0;
+ NUT_TX_U5MN_died_TSFP_2 := 0;
+ NUT_TX_U5MN_TO_TSFP_3 := 0;
+ NUT_TX_U5MN__Def_TSFP_4 := 0;
+ NUT_TX_U5MN_MAM__NR_TSFP_5 := 0;
+ NUT_TX_U5MN_MAM_Ext_TSFP_E := 0;
  NUT_DeW_Numerator := 0;
- NUT_TX-U5MN_SAM_us_OTP_8_ := 0;
- NUT_TX-U5MN_SAM_US_TSFP_8_ := 0;
+ NUT_TX_U5MN_SAM_us_OTP_8_ := 0;
+ NUT_TX_U5MN_SAM_US_TSFP_8_ := 0;
 
 begin
 
@@ -7357,667 +7357,1215 @@ ELSIF p_indic_name = 'indic_EPI_VWR_Penta_giv_' THEN
 
         --NUTRITION
 
--- Number of live-born babies with birth weight less than 2500 gm (NTR_LBW_1.)
-ELSIF p_indic_name = 'indic_NTR_LBW_1_' THEN IF p_record_x.indicator_name = 'indic_nutrition_rep_outcome_date' AND p_record_x.live_birth_alive = 'yes' AND COALESCE(p_record_x.outcome_location, '') <> ''  
 
-THEN
+-- Number of live-born babies with birth weight less than 2500 gm (NTR_LBW_1.)
+ELSIF p_indic_name = 'indic_NTR_LBW_1_' THEN  IF
+ p_record_x.live_birth_alive = 'yes'
+    
+        AND COALESCE(p_record_x.outcome_location, '') <> ''and 
+         ( COALESCE((p_record_x.birth_weight):: INTEGER, 0) < 2500 
+        or COALESCE((p_record_x.weight):: INTEGER, 0) < 2500 )
+ 
+ THEN
+
     NTR_LBW_1_ := 1;
 END IF;
 
 -- Total number of live births weighed (NTR_LBW_2.)
-ELSIF p_indic_name = 'indic_NTR_LBW_2_' THEN IF p_record_x.indicator_name = 'indic_nutrition_rep_outcome_date' AND p_record_x.live_birth_alive = 'yes' AND COALESCE(p_record_x.outcome_location, '') <> ''  
+ELSIF p_indic_name = 'indic_NTR_LBW_2_' THEN  IF
+ p_record_x.live_birth_alive = 'yes'
+    
+        AND COALESCE(p_record_x.outcome_location, '') <> ''
+    and    ( COALESCE((p_record_x.birth_weight):: INTEGER, 0) > 0 
+        or COALESCE((p_record_x.weight):: INTEGER, 0) > 0 )
+ THEN
 
-THEN
     NTR_LBW_2_ := 1;
 END IF;
 
 -- Number of children 0 - 5 months weighted during GMP session- (NTR_GMP. 1)
-ELSIF p_indic_name = 'indic_NTR_GMP_1' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_date' AND p_record_x.None <> -1 AND p_record_x.gmp_age_months <= 5  
+ELSIF p_indic_name = 'indic_NTR_GMP_1' THEN  IF 
+    (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_date::DATE, p_record_x.dob::DATE))
+  ) <=5
+    AND COALESCE(p_record_x.gmp_newest_weight, '') <> ''
 
-THEN
+
+    
+ THEN
+
     NTR_GMP_1 := 1;
 END IF;
 
 -- Number of children 6 - 23 months weighted during GMP session- (NTR_GMP. 2)
-ELSIF p_indic_name = 'indic_NTR_GMP_2' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_date' AND p_record_x.None <> -1 AND p_record_x.gmp_age_months >= 6 AND p_record_x.gmp_age_months <= 23  
+ELSIF p_indic_name = 'indic_NTR_GMP_2' THEN  IF
+   (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 23
+    AND COALESCE(p_record_x.gmp_newest_weight, '') <> ''
+    
+ THEN
 
-THEN
     NTR_GMP_2 := 1;
 END IF;
 
 -- Number of children 0 - 5 months weighted during GMP session- (NTR_GMP_MM. 1)
-ELSIF p_indic_name = 'indic_NTR_GMP_MM_1' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_weight_status_date' AND p_record_x.None <> -1 AND p_record_x.gmp_newest_weight_status = 'moderately_underweight' AND p_record_x.gmp_age_months <= 5  
+ELSIF p_indic_name = 'indic_NTR_GMP_MM_1' THEN  IF
+ p_record_x.gmp_newest_weight_status = 'moderately_underweight' and
+     (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE))
+  ) <=5
+        AND COALESCE(p_record_x.gmp_newest_weight , '') <> ''  
+         
+    
+ THEN
 
-THEN
     NTR_GMP_MM_1 := 1;
 END IF;
 
 -- Number of children 6 - 23 months weighted during GMP session- (NTR_GMP_MM. 2)
-ELSIF p_indic_name = 'indic_NTR_GMP_MM_2' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_weight_status_date' AND p_record_x.None <> -1 AND p_record_x.gmp_newest_weight_status = 'moderately_underweight' AND p_record_x.gmp_age_months >= 6 AND p_record_x.gmp_age_months <= 23  
+ELSIF p_indic_name = 'indic_NTR_GMP_MM_2' THEN  IF
+p_record_x.gmp_newest_weight_status = 'moderately_underweight' and
+     (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 23
+        AND COALESCE(p_record_x.gmp_newest_weight , '') <> ''  
+         
+    
+    
+ THEN
 
-THEN
     NTR_GMP_MM_2 := 1;
 END IF;
 
 -- Number of weights recorded with severe malnutrition by age ( Z score below -3): Severely underweight- 0 - 5 months(GMP_SM. 1)
-ELSIF p_indic_name = 'indic_GMP_SM_1' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_weight_status_date' AND p_record_x.None <> -1 AND p_record_x.gmp_newest_weight_status = 'severely_underweight' AND p_record_x.gmp_age_months <= 5  
+ELSIF p_indic_name = 'indic_GMP_SM_1' THEN  IF
+ p_record_x.gmp_newest_weight_status = 'severely_underweight' and
+     (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE))
+  ) <=5
+        AND COALESCE(p_record_x.gmp_newest_weight , '') <> ''
+ THEN
 
-THEN
     GMP_SM_1 := 1;
 END IF;
 
 -- Number of weights recorded with severe malnutrition by age ( Z score below -3): Severely underweight- 6 - 23 months(GMP_SM. 2)
-ELSIF p_indic_name = 'indic_GMP_SM_2' THEN IF p_record_x.indicator_name = 'indic_gmp_newest_weight_status_date' AND p_record_x.None <> -1 AND p_record_x.gmp_newest_weight_status = 'severely_underweight' AND p_record_x.gmp_age_months >= 6 AND p_record_x.gmp_age_months <= 23  
+ELSIF p_indic_name = 'indic_GMP_SM_2' THEN  IF
+p_record_x.gmp_newest_weight_status = 'severely_underweight' and
+     (
+    DATE_PART('year', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.gmp_newest_weight_status_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 23
+        AND COALESCE(p_record_x.gmp_newest_weight , '') <> ''  
+         
+    
+    
+ THEN
 
-THEN
     GMP_SM_2 := 1;
 END IF;
 
 -- Children aged 6 to 11 months who received vitamin A supplementation- (NUT_VITA.1.1)
-ELSIF p_indic_name = 'indic_NUT_VITA_1_1' THEN IF p_record_x.Vitamin_A_first_dose_date IS NOT NULL AND p_record_x.Vitamin_A_first_dose_date <> ''
+ELSIF p_indic_name = 'indic_NUT_VITA_1_1' THEN IF 
 
+ 
+     (
+    DATE_PART('year', AGE(p_record_x.Vitamin_A_first_dose_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.Vitamin_A_first_dose_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 11
+        AND COALESCE(p_record_x.Vitamin_A_first_dose_date , '') <> '' 
+        AND COALESCE(p_record_x.vitaminA_first_dose , '') <> '' 
     
-        AND p_record_x.indicator_name = 'indic_nut_rep_Vitamin_A_first_dose_date'
-    
-        AND COALESCE(p_record_x.Vitamin_A_first_dose_date, '') <> ''
-    
-        AND COALESCE(p_record_x.vitaminA_first_dose, '') <> ''
-    
-        AND p_record_x.vitamin_a_age_range = '6-11'
-    
+ THEN
 
-
-THEN
     NUT_VITA_1_1 := 1;
 END IF;
 
 -- Children Age: 12 to 59 Months who received vitamin A supplementation- (NUT_VITA.1.2)
-ELSIF p_indic_name = 'indic_NUT_VITA_1_2' THEN IF p_record_x.indicator_name = 'indic_nut_rep_report_date' AND p_record_x.vitamin_a_age_range = '12-59'  
+ELSIF p_indic_name = 'indic_NUT_VITA_1_2' THEN  IF
 
-THEN
+ 
+     (
+    DATE_PART('year', AGE(p_record_x.Vitamin_A_second_dose_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.Vitamin_A_second_dose_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 12 AND 59
+        AND COALESCE(p_record_x.Vitamin_A_second_dose_date , '') <> '' 
+        AND COALESCE(p_record_x.vitaminA_second_dose , '') <> '' 
+    
+ THEN
+
     NUT_VITA_1_2 := 1;
 END IF;
 
 -- Total number of children aged 6-59 months who received Vitamin A supplementation dis aggregated by dose- :First dose(NUT_VITA.2.1)
-ELSIF p_indic_name = 'indic_NUT_VITA_2_1' THEN IF p_record_x.Vitamin_A_first_dose_date IS NOT NULL AND p_record_x.Vitamin_A_first_dose_date <> ''
+ELSIF p_indic_name = 'indic_NUT_VITA_2_1' THEN IF 
+ 
+          COALESCE(p_record_x.Vitamin_A_first_dose_date , '') <> '' 
+        AND COALESCE(p_record_x.vitaminA_first_dose , '') <> '' 
+    
+ THEN
 
-    
-        AND p_record_x.indicator_name = 'indic_nut_rep_Vitamin_A_first_dose_date'
-    
-        AND COALESCE(p_record_x.Vitamin_A_first_dose_date, '') <> ''
-    
-        AND COALESCE(p_record_x.vitaminA_first_dose, '') <> ''
-    
-
-
-THEN
     NUT_VITA_2_1 := 1;
 END IF;
 
 -- Total number of children aged 6-59 months who received Vitamin A supplementation dis aggregated by dose- :Second dose(NUT_VITA.2.2)
-ELSIF p_indic_name = 'indic_NUT_VITA_2_2' THEN IF p_record_x.Vitamin_A_second_dose_date IS NOT NULL AND p_record_x.Vitamin_A_second_dose_date <> ''
+ELSIF p_indic_name = 'indic_NUT_VITA_2_2' THEN IF  
+     
+          COALESCE(p_record_x.Vitamin_A_second_dose_date , '') <> '' 
+        AND COALESCE(p_record_x.vitaminA_second_dose , '') <> '' 
+    
+    
+ THEN
 
-    
-        AND p_record_x.indicator_name = 'indic_nut_rep_Vitamin_A_second_dose_date'
-    
-        AND COALESCE(p_record_x.Vitamin_A_second_dose_date, '') <> ''
-    
-        AND COALESCE(p_record_x.vitaminA_second_dose, '') <> ''
-    
-
-
-THEN
     NUT_VITA_2_2 := 1;
 END IF;
 
 -- Children 24-59 month who received deworming- :First dose(NUT_DeW.1.1)
-ELSIF p_indic_name = 'indic_NUT_DeW_1_1' THEN IF p_record_x.deworming_first_dose_date IS NOT NULL AND p_record_x.deworming_first_dose_date <> ''
-
+ELSIF p_indic_name = 'indic_NUT_DeW_1_1' THEN IF  
     
-        AND p_record_x.indicator_name = 'indic_nut_rep_deworming_first_dose_date'
-    
-        AND COALESCE(p_record_x.deworming_first_dose_date, '') <> ''
+          COALESCE(p_record_x.deworming_first_dose_date, '') <> ''
     
         AND COALESCE(p_record_x.deworming_first_dose, '') <> ''
+     
+           (
+    DATE_PART('year', AGE(p_record_x.deworming_first_dose_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.deworming_first_dose_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 24 AND 59
     
-        AND p_record_x.deworming_age_range = '24-59'
-    
+ THEN
 
-
-THEN
     NUT_DeW_1_1 := 1;
 END IF;
 
 -- Children 24-59 month who received deworming- :Second dose(NUT_DeW.1.2)
-ELSIF p_indic_name = 'indic_NUT_DeW_1_2' THEN IF p_record_x.deworming_second_dose_date IS NOT NULL AND p_record_x.deworming_second_dose_date <> ''
+ELSIF p_indic_name = 'indic_NUT_DeW_1_2' THEN IF 
 
-    
-        AND p_record_x.indicator_name = 'indic_nut_rep_deworming_second_dose_date'
     
         AND COALESCE(p_record_x.deworming_second_dose_date, '') <> ''
     
         AND COALESCE(p_record_x.deworming_second_dose, '') <> ''
+     
+                   (
+    DATE_PART('year', AGE(p_record_x.deworming_second_dose_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.deworming_second_dose_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 24 AND 59
     
-        AND p_record_x.deworming_age_range = '24-59'
-    
+ THEN
 
-
-THEN
     NUT_DeW_1_2 := 1;
 END IF;
 
 -- Number of pregnant women De-wormed(NUT_DeW.2)
-ELSIF p_indic_name = 'indic_NUT_DeW_2' THEN IF p_record_x.indicator_name = 'indic_deworming_med_or_start_nutrition' AND p_record_x.is_pregnant = 'yes' AND p_record_x.child_or_plw = 'plw' AND p_record_x.start_nutrition_status = 'mam'  
+ELSIF p_indic_name = 'indic_NUT_DeW_2' THEN  IF
 
-THEN
+ p_record_x.is_pregnant = 'yes'
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.start_nutrition_status = 'mam' and (p_record_x.give_deworming = 'yes' or p_record_x.deworming_received = 'yes')
+
+and 
+
+
+ THEN
+
     NUT_DeW_2 := 1;
 END IF;
 
 -- 10-14 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.1)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_1' THEN IF p_record_x.indicator_name = 'indic_anc_date' AND p_record_x.age_years >= 10 AND p_record_x.age_years <= 14 AND p_record_x.None >= 90  
+ELSIF p_indic_name = 'indic_NUT_IFA_1_1' THEN  IF
+ p_record_x.age_years >= 10
+    
+        AND p_record_x.age_years <= 14
+    
+        AND p_record_x.age_years >= 90
+    
+ THEN
 
-THEN
     NUT_IFA_1_1 := 1;
 END IF;
 
 --  15-19 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.2)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_2' THEN IF p_record_x.indicator_name = 'indic_anc_date' AND p_record_x.age_years >= 15 AND p_record_x.age_years <= 19 AND p_record_x.None >= 90  
+ELSIF p_indic_name = 'indic_NUT_IFA_1_2' THEN  IF
+ p_record_x.age_years >= 15
+    
+        AND p_record_x.age_years <= 19
+    
+        AND p_record_x.age_years >= 90
+    
+ THEN
 
-THEN
     NUT_IFA_1_2 := 1;
 END IF;
 
 --  Greater than 20 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.3)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_3' THEN IF p_record_x.indicator_name = 'indic_anc_date' AND p_record_x.age_years >= 20 AND p_record_x.None >= 90  
+ELSIF p_indic_name = 'indic_NUT_IFA_1_3' THEN  IF
+ p_record_x.age_years >= 20
+    
+        AND p_record_x.age_years >= 90
+    
+ THEN
 
-THEN
     NUT_IFA_1_3 := 1;
 END IF;
 
 -- Total number of PLW screened for acute malnutrition(PLW_S4AM)
-ELSIF p_indic_name = 'indic_PLW_S4AM' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_date' AND p_record_x.child_or_plw = 'plw'  
+ELSIF p_indic_name = 'indic_PLW_S4AM' THEN  IF
+ p_record_x.child_or_plw = 'plw'
+    
+ THEN
 
-THEN
     PLW_S4AM := 1;
 END IF;
 
 -- Total number of PLW screened for acute malnutrition where MUAC is less than 23 cm(PLW_S4AM. 1)
-ELSIF p_indic_name = 'indic_PLW_S4AM_1' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.start_plw_muac < 23  
+ELSIF p_indic_name = 'indic_PLW_S4AM_1' THEN  IF
+ p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.start_plw_muac < 23
+    
+ THEN
 
-THEN
     PLW_S4AM_1 := 1;
 END IF;
 
 -- Total number of PLW screened for acute malnutrition where MUAC greater than or equal to 23 cm(PLW_S4AM. 2)
-ELSIF p_indic_name = 'indic_PLW_S4AM_2' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.start_plw_muac >= 23  
+ELSIF p_indic_name = 'indic_PLW_S4AM_2' THEN  IF
+ p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.start_plw_muac >= 23
+    
+ THEN
 
-THEN
     PLW_S4AM_2 := 1;
 END IF;
 
 -- Total number of Pregnant PLW screened for acute malnutrition By maternal status: (NUT_PreSMN.2.1)
-ELSIF p_indic_name = 'indic_NUT_PreSMN_2_1' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_date' AND p_record_x.is_pregnant = 'yes' AND p_record_x.child_or_plw = 'plw'  
+ELSIF p_indic_name = 'indic_NUT_PreSMN_2_1' THEN  IF
+ p_record_x.is_pregnant = 'yes'
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+ THEN
 
-THEN
     NUT_PreSMN_2_1 := 1;
 END IF;
 
 -- Total number of lactating PLW screened for acute malnutrition By maternal status:(NUT_PreSMN.2.2)
-ELSIF p_indic_name = 'indic_NUT_PreSMN_2_2' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_date' AND p_record_x.ppp_last_outcome_type = 'live_birth' AND p_record_x.child_or_plw = 'plw'  
+ELSIF p_indic_name = 'indic_NUT_PreSMN_2_2' THEN  IF
+ p_record_x.ppp_last_outcome_type = 'live_birth'
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+ THEN
 
-THEN
     NUT_PreSMN_2_2 := 1;
 END IF;
 
 -- Total number of children 0 - 5 months screened for acute malnutrition- (NUT_U5SMN.1.1)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_1_1' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_status_date' AND p_record_x.malnutrition_age_months < 5  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_1_1' THEN  IF
+ p_record_x.malnutrition_age_months < 5
+    
+ THEN
 
-THEN
     NUT_U5SMN_1_1 := 1;
 END IF;
 
 -- Total number of children <5yrs screened for acute malnutrition- 6 - 23 months(NUT_U5SMN.1.2)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_1_2' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_status_date' AND p_record_x.malnutrition_age_months <= 23 AND p_record_x.malnutrition_age_months >= 6  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_1_2' THEN  IF
+ p_record_x.malnutrition_age_months <= 23
+    
+        AND p_record_x.malnutrition_age_months >= 6
+    
+ THEN
 
-THEN
     NUT_U5SMN_1_2 := 1;
 END IF;
 
 -- Total number of children 24 - 59 months screened for acute malnutrition- (NUT_U5SMN.1.3)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_1_3' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_status_date' AND p_record_x.malnutrition_age_months < 60 AND p_record_x.malnutrition_age_months >= 24  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_1_3' THEN  IF
+ p_record_x.malnutrition_age_months < 60
+    
+        AND p_record_x.malnutrition_age_months >= 24
+    
+ THEN
 
-THEN
     NUT_U5SMN_1_3 := 1;
 END IF;
 
 -- Number of children 0 - 5 months year screened and have moderate acute malnutrition- (NUT_U5SMN.MAM.1.1)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_1' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months <= 5  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_1' THEN  IF
+ p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
     NUT_U5SMN_MAM_1_1 := 1;
 END IF;
 
 -- Number of children 6 - 23 months screened and have moderate acute malnutrition- (NUT_U5SMN.MAM.1.2)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_2' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months <= 23  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_2' THEN  IF
+ p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months <= 23
+    
+ THEN
 
-THEN
     NUT_U5SMN_MAM_1_2 := 1;
 END IF;
 
 -- Number of children <5 year screened and have moderate acute malnutrition- 24 - 59 months(NUT_U5SMN.MAM.1.3)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_3' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 24 AND p_record_x.age_months < 60  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_3' THEN  IF
+ p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 24
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
     NUT_U5SMN_MAM_1_3 := 1;
 END IF;
 
 -- Number of children 0 - 5 months screened and have severe acute malnutrition- (NUT_U5SMN.SAM.1.1)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_1' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months <= 5  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_1' THEN  IF
+ p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
     NUT_U5SMN_SAM_1_1 := 1;
 END IF;
 
 -- Number of children 6 - 23 months screened and have severe acute malnutrition- (NUT_U5SMN.SAM.1.2)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_2' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months <= 23  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_2' THEN  IF
+ p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months <= 23
+    
+ THEN
 
-THEN
     NUT_U5SMN_SAM_1_2 := 1;
 END IF;
 
 -- Number of children 24 - 59 months year screened and have severe acute malnutrition- (NUT_U5SMN.SAM.1.3)
-ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_3' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 24 AND p_record_x.age_months < 60  
+ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_3' THEN  IF
+ p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 24
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
     NUT_U5SMN_SAM_1_3 := 1;
 END IF;
 
--- Total SAM at the beginning of the month for Age: 0 to 5 Months(NUT_TX-U5MN_SAM_Beging_SC_1.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Beging_SC_1_1' THEN IF p_record_x.indicator_name = 'indic_beg_admission_date' AND p_record_x.closed = False AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 5  
+-- Total SAM at the beginning of the month for Age: 0 to 5 Months(NUT_TX_U5MN_SAM_Beging_SC_1.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_1' THEN  IF
+ p_record_x.closed = False
+    
+        AND p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Beging_SC_1_1 := 1;
+    NUT_TX_U5MN_SAM_Beging_SC_1_1 := 1;
 END IF;
 
--- Total SAM at the beginning of the month for Age: 6 - 23 Months(NUT_TX-U5MN_SAM_Beging_SC_1.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Beging_SC_1_2' THEN IF p_record_x.indicator_name = 'indic_beg_admission_date' AND p_record_x.closed = False AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Total SAM at the beginning of the month for Age: 6 - 23 Months(NUT_TX_U5MN_SAM_Beging_SC_1.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_2' THEN  IF
+ p_record_x.closed = False
+    
+        AND p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Beging_SC_1_2 := 1;
+    NUT_TX_U5MN_SAM_Beging_SC_1_2 := 1;
 END IF;
 
--- Total SAM at the beginning of the month for Age: 24 - 59 Months(NUT_TX-U5MN_SAM_Beging_SC_1.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Beging_SC_1_3' THEN IF p_record_x.indicator_name = 'indic_beg_admission_date' AND p_record_x.closed = False AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 59 AND p_record_x.age_months >= 24  
+-- Total SAM at the beginning of the month for Age: 24 - 59 Months(NUT_TX_U5MN_SAM_Beging_SC_1.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_3' THEN  IF
+ p_record_x.closed = False
+    
+        AND p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 59
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Beging_SC_1_3 := 1;
+    NUT_TX_U5MN_SAM_Beging_SC_1_3 := 1;
 END IF;
 
--- Total number of children Age: 0 to 5 Months with SAM admitted to SC during the reporting period(new and re-admision)- (NUT_TX-U5MN_SAM__Adt_SC_2.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM__Adt_SC_2_1' THEN IF p_record_x.indicator_name = 'indic_admission_date' AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 5  
+-- Total number of children Age: 0 to 5 Months with SAM admitted to SC during the reporting period(new and re-admision)- (NUT_TX_U5MN_SAM__Adt_SC_2.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_1' THEN  IF
+ p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM__Adt_SC_2_1 := 1;
+    NUT_TX_U5MN_SAM__Adt_SC_2_1 := 1;
 END IF;
 
--- Total number of children Age: 6 - 23 Months with SAM admitted to SC during the reporting period(new and re-admision)- (NUT_TX-U5MN_SAM__Adt_SC_2.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM__Adt_SC_2_2' THEN IF p_record_x.indicator_name = 'indic_admission_date' AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Total number of children Age: 6 - 23 Months with SAM admitted to SC during the reporting period(new and re-admision)- (NUT_TX_U5MN_SAM__Adt_SC_2.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_2' THEN  IF
+ p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM__Adt_SC_2_2 := 1;
+    NUT_TX_U5MN_SAM__Adt_SC_2_2 := 1;
 END IF;
 
--- Total number of children Age: 24 - 59 Months with SAM admitted to SC during the reporting period(new and re-admision)-(NUT_TX-U5MN_SAM__Adt_SC_2.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM__Adt_SC_2_3' THEN IF p_record_x.indicator_name = 'indic_admission_date' AND p_record_x.admit_in_sc = 'yes' AND p_record_x.age_months <= 59 AND p_record_x.age_months >= 24  
+-- Total number of children Age: 24 - 59 Months with SAM admitted to SC during the reporting period(new and re-admision)-(NUT_TX_U5MN_SAM__Adt_SC_2.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_3' THEN  IF
+ p_record_x.admit_in_sc = 'yes'
+    
+        AND p_record_x.age_months <= 59
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM__Adt_SC_2_3 := 1;
+    NUT_TX_U5MN_SAM__Adt_SC_2_3 := 1;
 END IF;
 
--- Number of children Age: 0 to 5 Months stablized- (NUT_TX-U5MN_SAM_Stab_SC_3.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Stab_SC_3_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.newest_sc_treatment_outcome = 'stabilized' AND p_record_x.age_months <= 5  
+-- Number of children Age: 0 to 5 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_1' THEN  IF
+ p_record_x.newest_sc_treatment_outcome = 'stabilized'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Stab_SC_3_1 := 1;
+    NUT_TX_U5MN_SAM_Stab_SC_3_1 := 1;
 END IF;
 
--- Number of children Age: 6 - 23 Months stablized- (NUT_TX-U5MN_SAM_Stab_SC_3.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Stab_SC_3_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.newest_sc_treatment_outcome = 'stabilized' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children Age: 6 - 23 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_2' THEN  IF
+ p_record_x.newest_sc_treatment_outcome = 'stabilized'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Stab_SC_3_2 := 1;
+    NUT_TX_U5MN_SAM_Stab_SC_3_2 := 1;
 END IF;
 
--- Number of children Age: 24 - 59 Months stablized- (NUT_TX-U5MN_SAM_Stab_SC_3.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Stab_SC_3_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.newest_sc_treatment_outcome = 'stabilized' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children Age: 24 - 59 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_3' THEN  IF
+ p_record_x.newest_sc_treatment_outcome = 'stabilized'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Stab_SC_3_3 := 1;
+    NUT_TX_U5MN_SAM_Stab_SC_3_3 := 1;
 END IF;
 
--- Number of children Age: 0 to 5 Months cured(NUT_TX-U5MN_SAM_Cur_SC_ 4.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Cur_SC_4_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'cured' AND p_record_x.age_months <= 5  
+-- Number of children Age: 0 to 5 Months cured(NUT_TX_U5MN_SAM_Cur_SC_ 4.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'cured'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Cur_SC_4_1 := 1;
+    NUT_TX_U5MN_SAM_Cur_SC_4_1 := 1;
 END IF;
 
--- Number of children Age: 6 - 23 Months cured (NUT_TX-U5MN_SAM_Cur_SC_ 4.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Cur_SC_4_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'cured' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children Age: 6 - 23 Months cured (NUT_TX_U5MN_SAM_Cur_SC_ 4.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'cured'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Cur_SC_4_2 := 1;
+    NUT_TX_U5MN_SAM_Cur_SC_4_2 := 1;
 END IF;
 
--- Number of children Age: 24 - 59 Months cured (NUT_TX-U5MN_SAM_Cur_SC_ 4.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Cur_SC_4_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'cured' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children Age: 24 - 59 Months cured (NUT_TX_U5MN_SAM_Cur_SC_ 4.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'cured'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Cur_SC_4_3 := 1;
+    NUT_TX_U5MN_SAM_Cur_SC_4_3 := 1;
 END IF;
 
--- Number of children Age: 0 to 5 Months died- (NUT_TX-U5MN_SAM_died_SC_5.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_died_SC_5_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'dead' AND p_record_x.age_months <= 5  
+-- Number of children Age: 0 to 5 Months died- (NUT_TX_U5MN_SAM_died_SC_5.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'dead'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_died_SC_5_1 := 1;
+    NUT_TX_U5MN_SAM_died_SC_5_1 := 1;
 END IF;
 
--- Number of children Age: 6 - 23 Months died- (NUT_TX-U5MN_SAM_died_SC_5.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_died_SC_5_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'dead' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children Age: 6 - 23 Months died- (NUT_TX_U5MN_SAM_died_SC_5.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'dead'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_died_SC_5_2 := 1;
+    NUT_TX_U5MN_SAM_died_SC_5_2 := 1;
 END IF;
 
--- Number of children Age: 24 - 59 Months died- (NUT_TX-U5MN_SAM_died_SC_5.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_died_SC_5_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'dead' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children Age: 24 - 59 Months died- (NUT_TX_U5MN_SAM_died_SC_5.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'dead'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_died_SC_5_3 := 1;
+    NUT_TX_U5MN_SAM_died_SC_5_3 := 1;
 END IF;
 
--- Number of children Age: 0 to 5 Months transferred out- (NUT_TX-U5MN_SAM_TO_SC_6.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_TO_SC_6_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'transferred_out' AND p_record_x.age_months <= 5  
+-- Number of children Age: 0 to 5 Months transferred out- (NUT_TX_U5MN_SAM_TO_SC_6.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_TO_SC_6_1 := 1;
+    NUT_TX_U5MN_SAM_TO_SC_6_1 := 1;
 END IF;
 
--- Number of children Age: 6 - 23 Months transferred out- (NUT_TX-U5MN_SAM_TO_SC_6.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_TO_SC_6_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'transferred_out' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children Age: 6 - 23 Months transferred out- (NUT_TX_U5MN_SAM_TO_SC_6.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_TO_SC_6_2 := 1;
+    NUT_TX_U5MN_SAM_TO_SC_6_2 := 1;
 END IF;
 
--- Number of children Age: 24 - 59 Months transferred out- (NUT_TX-U5MN_SAM_TO_SC_6.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_TO_SC_6_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'transferred_out' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children Age: 24 - 59 Months transferred out- (NUT_TX_U5MN_SAM_TO_SC_6.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_TO_SC_6_3 := 1;
+    NUT_TX_U5MN_SAM_TO_SC_6_3 := 1;
 END IF;
 
--- Number of children Age: 0 to 5 Months defaulted-(NUT_TX-U5MN_SAM_Def_SC_7.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Def_SC_7_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted' AND p_record_x.age_months <= 5  
+-- Number of children Age: 0 to 5 Months defaulted-(NUT_TX_U5MN_SAM_Def_SC_7.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Def_SC_7_1 := 1;
+    NUT_TX_U5MN_SAM_Def_SC_7_1 := 1;
 END IF;
 
--- Number of children age: 6 - 23 Months defaulted- (NUT_TX-U5MN_SAM_Def_SC_7.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Def_SC_7_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children age: 6 - 23 Months defaulted- (NUT_TX_U5MN_SAM_Def_SC_7.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Def_SC_7_2 := 1;
+    NUT_TX_U5MN_SAM_Def_SC_7_2 := 1;
 END IF;
 
--- Number of children Age: 24 - 59 Months defaulted- (NUT_TX-U5MN_SAM_Def_SC_7.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Def_SC_7_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children Age: 24 - 59 Months defaulted- (NUT_TX_U5MN_SAM_Def_SC_7.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Def_SC_7_3 := 1;
+    NUT_TX_U5MN_SAM_Def_SC_7_3 := 1;
 END IF;
 
--- Number of children age: 0 to 5 Months -non-respondent-(NUT_TX-U5MN_SAM_NR_SC_8.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_NR_SC_8_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'non_responder' AND p_record_x.age_months <= 5  
+-- Number of children age: 0 to 5 Months -non-respondent-(NUT_TX_U5MN_SAM_NR_SC_8.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_NR_SC_8_1 := 1;
+    NUT_TX_U5MN_SAM_NR_SC_8_1 := 1;
 END IF;
 
--- Number of children age: 6 - 23 Months -non-respondent-(NUT_TX-U5MN_SAM_NR_SC_8.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_NR_SC_8_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'non_responder' AND p_record_x.age_months <= 23 AND p_record_x.age_months >= 6  
+-- Number of children age: 6 - 23 Months -non-respondent-(NUT_TX_U5MN_SAM_NR_SC_8.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
+    
+        AND p_record_x.age_months <= 23
+    
+        AND p_record_x.age_months >= 6
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_NR_SC_8_2 := 1;
+    NUT_TX_U5MN_SAM_NR_SC_8_2 := 1;
 END IF;
 
--- Number of children age: 24 - 59 Months-non-respondent- (NUT_TX-U5MN_SAM_NR_SC_8.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_NR_SC_8_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND p_record_x.newest_sc_treatment_outcome = 'non_responder' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 24  
+-- Number of children age: 24 - 59 Months-non-respondent- (NUT_TX_U5MN_SAM_NR_SC_8.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 24
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_NR_SC_8_3 := 1;
+    NUT_TX_U5MN_SAM_NR_SC_8_3 := 1;
 END IF;
 
--- Number of children age: 0 to 5 Months who exit from severe acute malnutrition treatment during the reporting period-(NUT_TX-U5MN_SAM_Ext_SC_9.1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Ext_SC_9_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> '' AND p_record_x.age_months <= 5  
+-- Number of children age: 0 to 5 Months who exit from severe acute malnutrition treatment during the reporting period-(NUT_TX_U5MN_SAM_Ext_SC_9.1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
+    
+        AND p_record_x.age_months <= 5
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Ext_SC_9_1 := 1;
+    NUT_TX_U5MN_SAM_Ext_SC_9_1 := 1;
 END IF;
 
--- Number of children age: 6 - 23 Months who exit from severe acute malnutrition treatment during the reporting period- (NUT_TX-U5MN_SAM_Ext_SC_9.2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Ext_SC_9_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> '' AND p_record_x.age_months >= 6 AND p_record_x.age_months <= 23  
+-- Number of children age: 6 - 23 Months who exit from severe acute malnutrition treatment during the reporting period- (NUT_TX_U5MN_SAM_Ext_SC_9.2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months <= 23
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Ext_SC_9_2 := 1;
+    NUT_TX_U5MN_SAM_Ext_SC_9_2 := 1;
 END IF;
 
--- Number of children age: 24 - 59 Months who exit from severe acute malnutrition treatment during the reporting period- (NUT_TX-U5MN_SAM_Ext_SC_9.3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Ext_SC_9_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date_hc' AND p_record_x.closed = True AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> '' AND p_record_x.age_months >= 24 AND p_record_x.age_months < 60  
+-- Number of children age: 24 - 59 Months who exit from severe acute malnutrition treatment during the reporting period- (NUT_TX_U5MN_SAM_Ext_SC_9.3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
+    
+        AND p_record_x.age_months >= 24
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Ext_SC_9_3 := 1;
+    NUT_TX_U5MN_SAM_Ext_SC_9_3 := 1;
 END IF;
 
--- Total SAM at the beginning of the month for OTP(NUT_TX-U5MN_SAM_OTP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_OTP' THEN IF p_record_x.indicator_name = 'indic_beg_start_nutrition_date' AND p_record_x.closed = False AND p_record_x.start_nutrition_status = 'red' AND p_record_x.treatment_location = 'Health Post' AND p_record_x.treatment_plan = 'OTP Follow-up' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Total SAM at the beginning of the month for OTP(NUT_TX_U5MN_SAM_OTP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_OTP' THEN  IF
+ p_record_x.closed = False
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.treatment_location = 'Health Post'
+    
+        AND p_record_x.treatment_plan = 'OTP Follow-up'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_OTP := 1;
+    NUT_TX_U5MN_SAM_OTP := 1;
 END IF;
 
--- Total number of children with SAM admitted to OTP during the reporting period(NUT_TX-U5MN_SAM_Adt_OTP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Adt_OTP' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.treatment_location = 'Health Post' AND p_record_x.treatment_plan = 'OTP Follow-up' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Total number of children with SAM admitted to OTP during the reporting period(NUT_TX_U5MN_SAM_Adt_OTP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Adt_OTP' THEN  IF
+ p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.treatment_location = 'Health Post'
+    
+        AND p_record_x.treatment_plan = 'OTP Follow-up'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Adt_OTP := 1;
+    NUT_TX_U5MN_SAM_Adt_OTP := 1;
 END IF;
 
--- Number of children cured(NUT_TX-U5MN_SAM_Cur_OTP_1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Cur_OTP_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'cured' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children cured(NUT_TX_U5MN_SAM_Cur_OTP_1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_OTP_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'cured'
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Cur_OTP_1 := 1;
+    NUT_TX_U5MN_SAM_Cur_OTP_1 := 1;
 END IF;
 
--- Number of children died(NUT_TX-U5MN_SAM_died_OTP_2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_died_OTP_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'died' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children died(NUT_TX_U5MN_SAM_died_OTP_2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_OTP_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'died'
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_died_OTP_2 := 1;
+    NUT_TX_U5MN_SAM_died_OTP_2 := 1;
 END IF;
 
--- Number of children transferred out(NUT_TX-U5MN_SAM_TO_OTP_3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_TO_OTP_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'transfer_out' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children transferred out(NUT_TX_U5MN_SAM_TO_OTP_3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_OTP_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'transfer_out'
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_TO_OTP_3 := 1;
+    NUT_TX_U5MN_SAM_TO_OTP_3 := 1;
 END IF;
 
--- Number of children defaulted(NUT_TX-U5MN_SAM_Def_OTP_4)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Def_OTP_4' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'defaulted' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children defaulted(NUT_TX_U5MN_SAM_Def_OTP_4)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_OTP_4' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'defaulted'
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Def_OTP_4 := 1;
+    NUT_TX_U5MN_SAM_Def_OTP_4 := 1;
 END IF;
 
--- Number of children -non-respondent(NUT_TX-U5MN_SAM_NR_OTP_5)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_NR_OTP_5' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'non_responder' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children -non-respondent(NUT_TX_U5MN_SAM_NR_OTP_5)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_OTP_5' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'non_responder'
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_NR_OTP_5 := 1;
+    NUT_TX_U5MN_SAM_NR_OTP_5 := 1;
 END IF;
 
--- Number of children who exit from severe acute malnutrition treatment during the reporting period(NUT_TX-U5MN_SAM_Ext_OTP_E)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Ext_OTP_E' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND COALESCE(p_record_x.discharged_categories, '') <> '' AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
+-- Number of children who exit from severe acute malnutrition treatment during the reporting period(NUT_TX_U5MN_SAM_Ext_OTP_E)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_OTP_E' THEN  IF
+ COALESCE(p_record_x.discharged_categories, '') <> ''
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_SAM_Ext_OTP_E := 1;
+    NUT_TX_U5MN_SAM_Ext_OTP_E := 1;
 END IF;
 
--- Total MAM at the beginning of the month(NUT_TX-U5MN__MAM_Beging_OTP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN__MAM_Beging_OTP' THEN IF p_record_x.indicator_name = 'indic_beg_nut_rep_start_nutrition_status_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.malnutrition_age_months >= 6 AND p_record_x.malnutrition_age_months < 60  
+-- Total MAM at the beginning of the month(NUT_TX_U5MN__MAM_Beging_OTP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN__MAM_Beging_OTP' THEN  IF
+ p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.malnutrition_age_months >= 6
+    
+        AND p_record_x.malnutrition_age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN__MAM_Beging_OTP := 1;
+    NUT_TX_U5MN__MAM_Beging_OTP := 1;
 END IF;
 
--- Total number of children with MAM admitted to TSFP/IMAM during the reporting period(NUT_TX-U5MN_MAM_Adt_TSFP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_MAM_Adt_TSFP' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_status_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.treatment_plan = 'IMAM/TSFP Follow-up' AND p_record_x.malnutrition_age_months >= 6 AND p_record_x.malnutrition_age_months < 60  
+-- Total number of children with MAM admitted to TSFP/IMAM during the reporting period(NUT_TX_U5MN_MAM_Adt_TSFP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM_Adt_TSFP' THEN  IF
+ p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.treatment_plan = 'IMAM/TSFP Follow-up'
+    
+        AND p_record_x.malnutrition_age_months >= 6
+    
+        AND p_record_x.malnutrition_age_months < 60
+    
+ THEN
 
-THEN
-    NUT_TX-U5MN_MAM_Adt_TSFP := 1;
-END IF;
-
--- Total number of children with MAM admitted to TSFP/IMAM during the reporting period(xxNUT_TX-U5MN_MAM_Adt_TSFP)
-ELSIF p_indic_name = 'indic_xxNUT_TX-U5MN_MAM_Adt_TSFP' THEN IF p_record_x.indicator_name = 'indic_nut_rep_start_nutrition_status_date' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.treatment_plan = 'IMAM/TSFP Follow-up' AND p_record_x.malnutrition_age_months >= 6 AND p_record_x.malnutrition_age_months < 60  
-
-THEN
-    xxNUT_TX-U5MN_MAM_Adt_TSFP := 1;
-END IF;
-
--- Number of children cured(NUT_TX-U5MN_SAM_Cur_TSFP_1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Cur_TSFP_1' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'cured' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN_SAM_Cur_TSFP_1 := 1;
-END IF;
-
--- Number of children died(NUT_TX-U5MN_SAM_died_TSFP_2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_died_TSFP_2' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'died' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN_SAM_died_TSFP_2 := 1;
-END IF;
-
--- Number of children transferred out(NUT_TX-U5MN_SAM_TO_TSFP_3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_TO_TSFP_3' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'transfer_out' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN_SAM_TO_TSFP_3 := 1;
-END IF;
-
--- Number of children defaulted(NUT_TX-U5MN_SAM_Def_TSFP_4)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_Def_TSFP_4' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.closed = True AND p_record_x.discharged_categories = 'defaulted' AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN_SAM_Def_TSFP_4 := 1;
-END IF;
-
--- Number of children -non-respondent(NUT_TX-U5MN_SAM_NR_TSFP_5)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_NR_TSFP_5' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.discharged_categories = 'non_responder' AND p_record_x.closed = True AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN_SAM_NR_TSFP_5 := 1;
-END IF;
-
--- Number of children who exit from MAM treatment during the reporting period(NUT_TX-U5MN__SAM_Ext_TSFP_E)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN__SAM_Ext_TSFP_E' THEN IF p_record_x.indicator_name = 'indic_discharged_date' AND COALESCE(p_record_x.discharged_categories, '') <> '' AND p_record_x.closed = True AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months >= 6 AND p_record_x.age_months < 60  
-
-THEN
-    NUT_TX-U5MN__SAM_Ext_TSFP_E := 1;
-END IF;
-
--- Total MAM at the beginning of the month(NUT_TX-U5MN_MAM_Beging_OTP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_MAM_Beging_OTP' THEN IF p_record_x.indicator_name = 'indic_beg_start_nutrition_date' AND p_record_x.closed = False AND p_record_x.start_nutrition_status = 'mam' AND p_record_x.child_or_plw = 'plw'  
-
-THEN
-    NUT_TX-U5MN_MAM_Beging_OTP := 1;
-END IF;
-
--- Total number of PLW with MAM admitted to TSFP/IMAM during the reporting period(NUT_TX-U5MN_MAM_Adt_OTP)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_MAM_Adt_OTP' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.start_nutrition_status = 'mam' AND p_record_x.child_or_plw = 'plw'  
-
-THEN
-    NUT_TX-U5MN_MAM_Adt_OTP := 1;
-END IF;
-
--- Number of plw cured(NUT_TX-U5MN_Cur_TSFP_1)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_Cur_TSFP_1' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.discharge_categories = 'cured'  
-
-THEN
-    NUT_TX-U5MN_Cur_TSFP_1 := 1;
-END IF;
-
--- Number of PLW died(NUT_TX-U5MN_died_TSFP_2)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_died_TSFP_2' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.discharge_categories = 'died'  
-
-THEN
-    NUT_TX-U5MN_died_TSFP_2 := 1;
-END IF;
-
--- Number of PLW transferred out(NUT_TX-U5MN_TO_TSFP_3)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_TO_TSFP_3' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.discharge_categories = 'transfer_out'  
-
-THEN
-    NUT_TX-U5MN_TO_TSFP_3 := 1;
-END IF;
-
--- Number of PLW defaulted(NUT_TX-U5MN_.Def_TSFP_4)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN__Def_TSFP_4' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.discharge_categories = 'defaulted'  
-
-THEN
-    NUT_TX-U5MN__Def_TSFP_4 := 1;
-END IF;
-
--- Number of PLW -non-respondent(NUT_TX-U5MN_MAM_.NR_TSFP_5)
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_MAM__NR_TSFP_5' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND p_record_x.discharge_categories = 'non_responder'  
-
-THEN
-    NUT_TX-U5MN_MAM__NR_TSFP_5 := 1;
-END IF;
-
--- Number of PLW who exit from MAM treatment during the reporting period(NUT_TX-U5MN_MAM-Ext_TSFP_E) 
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_MAM-Ext_TSFP_E' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_discharged_date' AND p_record_x.child_or_plw = 'plw' AND COALESCE(p_record_x.discharge_categories, '') <> ''  
-
-THEN
-    NUT_TX-U5MN_MAM-Ext_TSFP_E := 1;
-END IF;
-
--- Proportion of children 24-59 months de-wormed-Numerator
-ELSIF p_indic_name = 'indic_NUT_DeW_Numerator' THEN IF p_record_x.closed = True AND p_record_x.indicator_name = 'indic_deworming_second_dose_date' AND p_record_x.deworming_age_range = '24-59' AND COALESCE(p_record_x.deworming_second_dose, '') <> ''  
-
-THEN
-    NUT_DeW_Numerator := 1;
-END IF;
-
--- OTP_Number of children unknown statu:NUT_TX-U5MN_SAM_us_OTP_8.
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_us_OTP_8_' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.closed = True AND p_record_x.start_nutrition_status = 'red' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 6 AND COALESCE(p_record_x.discharged_categories, '') <> ''  
-
-THEN
-    NUT_TX-U5MN_SAM_us_OTP_8_ := 1;
-END IF;
-
--- MAM_Number of children unknown status:NUT_TX-U5MN_SAM_US_TSFP_8.
-ELSIF p_indic_name = 'indic_NUT_TX-U5MN_SAM_US_TSFP_8_' THEN IF p_record_x.indicator_name = 'indic_start_nutrition_date' AND p_record_x.closed = True AND p_record_x.start_nutrition_status = 'yellow' AND p_record_x.age_months < 60 AND p_record_x.age_months >= 6 AND COALESCE(p_record_x.discharged_categories, '') <> ''  
-
-THEN
-    NUT_TX-U5MN_SAM_US_TSFP_8_ := 1;
+    NUT_TX_U5MN_MAM_Adt_TSFP := 1;
 END IF;
  
 
+-- Number of children cured(NUT_TX_U5MN_SAM_Cur_TSFP_1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_TSFP_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'cured'
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_Cur_TSFP_1 := 1;
+END IF;
+
+-- Number of children died(NUT_TX_U5MN_SAM_died_TSFP_2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_TSFP_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'died'
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_died_TSFP_2 := 1;
+END IF;
+
+-- Number of children transferred out(NUT_TX_U5MN_SAM_TO_TSFP_3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_TSFP_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'transfer_out'
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_TO_TSFP_3 := 1;
+END IF;
+
+-- Number of children defaulted(NUT_TX_U5MN_SAM_Def_TSFP_4)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_TSFP_4' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.discharged_categories = 'defaulted'
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_Def_TSFP_4 := 1;
+END IF;
+
+-- Number of children -non-respondent(NUT_TX_U5MN_SAM_NR_TSFP_5)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_TSFP_5' THEN  IF
+ p_record_x.discharged_categories = 'non_responder'
+    
+        AND p_record_x.closed = True
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_NR_TSFP_5 := 1;
+END IF;
+
+-- Number of children who exit from MAM treatment during the reporting period(NUT_TX_U5MN__SAM_Ext_TSFP_E)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN__SAM_Ext_TSFP_E' THEN  IF
+ COALESCE(p_record_x.discharged_categories, '') <> ''
+    
+        AND p_record_x.closed = True
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months >= 6
+    
+        AND p_record_x.age_months < 60
+    
+ THEN
+
+    NUT_TX_U5MN__SAM_Ext_TSFP_E := 1;
+END IF;
+
+-- Total MAM at the beginning of the month(NUT_TX_U5MN_MAM_Beging_OTP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM_Beging_OTP' THEN  IF
+ p_record_x.closed = False
+    
+        AND p_record_x.start_nutrition_status = 'mam'
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+ THEN
+
+    NUT_TX_U5MN_MAM_Beging_OTP := 1;
+END IF;
+
+-- Total number of PLW with MAM admitted to TSFP/IMAM during the reporting period(NUT_TX_U5MN_MAM_Adt_OTP)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM_Adt_OTP' THEN  IF
+ p_record_x.start_nutrition_status = 'mam'
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+ THEN
+
+    NUT_TX_U5MN_MAM_Adt_OTP := 1;
+END IF;
+
+-- Number of plw cured(NUT_TX_U5MN_Cur_TSFP_1)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_Cur_TSFP_1' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.discharge_categories = 'cured'
+    
+ THEN
+
+    NUT_TX_U5MN_Cur_TSFP_1 := 1;
+END IF;
+
+-- Number of PLW died(NUT_TX_U5MN_died_TSFP_2)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_died_TSFP_2' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.discharge_categories = 'died'
+    
+ THEN
+
+    NUT_TX_U5MN_died_TSFP_2 := 1;
+END IF;
+
+-- Number of PLW transferred out(NUT_TX_U5MN_TO_TSFP_3)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_TO_TSFP_3' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.discharge_categories = 'transfer_out'
+    
+ THEN
+
+    NUT_TX_U5MN_TO_TSFP_3 := 1;
+END IF;
+
+-- Number of PLW defaulted(NUT_TX_U5MN_.Def_TSFP_4)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN__Def_TSFP_4' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.discharge_categories = 'defaulted'
+    
+ THEN
+
+    NUT_TX_U5MN__Def_TSFP_4 := 1;
+END IF;
+
+-- Number of PLW -non-respondent(NUT_TX_U5MN_MAM_.NR_TSFP_5)
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM__NR_TSFP_5' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND p_record_x.discharge_categories = 'non_responder'
+    
+ THEN
+
+    NUT_TX_U5MN_MAM__NR_TSFP_5 := 1;
+END IF;
+
+-- Number of PLW who exit from MAM treatment during the reporting period(NUT_TX_U5MN_MAM_Ext_TSFP_E) 
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM_Ext_TSFP_E' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.child_or_plw = 'plw'
+    
+        AND COALESCE(p_record_x.discharge_categories, '') <> ''
+    
+ THEN
+
+    NUT_TX_U5MN_MAM_Ext_TSFP_E := 1;
+END IF;
+
+-- Proportion of children 24-59 months de-wormed-Numerator
+ELSIF p_indic_name = 'indic_NUT_DeW_Numerator' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.deworming_age_range = '24-59'
+    
+        AND COALESCE(p_record_x.deworming_second_dose, '') <> ''
+    
+ THEN
+
+    NUT_DeW_Numerator := 1;
+END IF;
+
+-- OTP_Number of children unknown statu:NUT_TX_U5MN_SAM_us_OTP_8.
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_us_OTP_8_' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.start_nutrition_status = 'red'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 6
+    
+        AND COALESCE(p_record_x.discharged_categories, '') <> ''
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_us_OTP_8_ := 1;
+END IF;
+
+-- MAM_Number of children unknown status:NUT_TX_U5MN_SAM_US_TSFP_8.
+ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_US_TSFP_8_' THEN  IF
+ p_record_x.closed = True
+    
+        AND p_record_x.start_nutrition_status = 'yellow'
+    
+        AND p_record_x.age_months < 60
+    
+        AND p_record_x.age_months >= 6
+    
+        AND COALESCE(p_record_x.discharged_categories, '') <> ''
+    
+ THEN
+
+    NUT_TX_U5MN_SAM_US_TSFP_8_ := 1;
+END IF;
+
+ 
+END IF;
     --******************************
 
 
