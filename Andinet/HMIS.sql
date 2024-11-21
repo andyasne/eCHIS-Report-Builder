@@ -7564,60 +7564,39 @@ END IF;
 -- Number of pregnant women De-wormed(NUT_DeW.2)
 ELSIF p_indic_name = 'indic_NUT_DeW_2' THEN  IF
 
- p_record_x.is_pregnant = 'yes'
-    
-        AND p_record_x.child_or_plw = 'plw'
-    
-        AND p_record_x.start_nutrition_status = 'mam' and (p_record_x.give_deworming = 'yes' or p_record_x.deworming_received = 'yes')
-
-and 
-
-
- THEN
+p_record_x.is_pregnant = 'yes'
+AND p_record_x.child_or_plw = 'plw'
+AND p_record_x.start_nutrition_status = 'mam' and (p_record_x.give_deworming = 'yes' or p_record_x.deworming_received = 'yes')
+and (COALESCE(p_record_x.outcome_maternal, '') <> ''or p_record_x.post_partum = 'no')
+ 
+ THEN       
 
     NUT_DeW_2 := 1;
 END IF;
 
--- 10-14 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.1)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_1' THEN  IF
- p_record_x.age_years >= 10
-    
-        AND p_record_x.age_years <= 14
-    
-        AND p_record_x.age_years >= 90
-    
- THEN
+-- 10-14 yr Pregnant women received IFA at least 90 plus- (         )-** MULTIPLE REPORT COLUMNS
+ELSIF p_indic_name = 'indic_NUT_IFA_1_1' THEN      NUT_IFA_1_1 := 0;
+ 
+--  15-19 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.2)** MULTIPLE REPORT COLUMNS
+ELSIF p_indic_name = 'indic_NUT_IFA_1_2' THEN      NUT_IFA_1_2 := 0; 
 
-    NUT_IFA_1_1 := 1;
-END IF;
+--  Greater than 20 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.3)** MULTIPLE REPORT COLUMNS
+ELSIF p_indic_name = 'indic_NUT_IFA_1_3' THEN      NUT_IFA_1_3 := 0; 
 
---  15-19 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.2)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_2' THEN  IF
- p_record_x.age_years >= 15
-    
-        AND p_record_x.age_years <= 19
-    
-        AND p_record_x.age_years >= 90
-    
- THEN
+-- Total number of PLW screened for acute malnutrition(PLW_S4AM) CHECK
 
-    NUT_IFA_1_2 := 1;
-END IF;
-
---  Greater than 20 yr Pregnant women received IFA at least 90 plus- (NUT_IFA.1.3)
-ELSIF p_indic_name = 'indic_NUT_IFA_1_3' THEN  IF
- p_record_x.age_years >= 20
-    
-        AND p_record_x.age_years >= 90
-    
- THEN
-
-    NUT_IFA_1_3 := 1;
-END IF;
-
--- Total number of PLW screened for acute malnutrition(PLW_S4AM)
+-- "1. Should be case type of Client and has pregnancy_pp extension case (open) and malnutrition case (open and closed)
+-- On client case, case property:
+--   pregnant_or_pp = ‘yes’
+-- On pregnancy_pp case, case property:
+-- 2. post_partum = ‘no’ or outcome_maternal = “”
+-- On malnutrition case, case property:
+-- 3. child_or_plw =  'plw'
+-- 4. start_nutrition_status = "" mam"" or start_nutrition_status = "" normal""
+-- 5. start_nutrition_date during reporting period
+-- "
 ELSIF p_indic_name = 'indic_PLW_S4AM' THEN  IF
- p_record_x.child_or_plw = 'plw'
+ p_record_x.child_or_plw = 'plw'and (p_record_x.start_nutrition_status = 'mam' or p_record_x.start_nutrition_status = 'normal')
     
  THEN
 
@@ -7627,8 +7606,7 @@ END IF;
 -- Total number of PLW screened for acute malnutrition where MUAC is less than 23 cm(PLW_S4AM. 1)
 ELSIF p_indic_name = 'indic_PLW_S4AM_1' THEN  IF
  p_record_x.child_or_plw = 'plw'
-    
-        AND p_record_x.start_plw_muac < 23
+       and   COALESCE((p_record_x.start_plw_muac):: INTEGER, 0) < 23
     
  THEN
 
@@ -7638,8 +7616,8 @@ END IF;
 -- Total number of PLW screened for acute malnutrition where MUAC greater than or equal to 23 cm(PLW_S4AM. 2)
 ELSIF p_indic_name = 'indic_PLW_S4AM_2' THEN  IF
  p_record_x.child_or_plw = 'plw'
+     and   COALESCE((p_record_x.start_plw_muac):: INTEGER, 0) >= 23 
     
-        AND p_record_x.start_plw_muac >= 23
     
  THEN
 
@@ -7651,6 +7629,7 @@ ELSIF p_indic_name = 'indic_NUT_PreSMN_2_1' THEN  IF
  p_record_x.is_pregnant = 'yes'
     
         AND p_record_x.child_or_plw = 'plw'
+        and (p_record_x.start_nutrition_status = 'mam' or p_record_x.start_nutrition_status = 'normal')
     
  THEN
 
@@ -7670,7 +7649,13 @@ END IF;
 
 -- Total number of children 0 - 5 months screened for acute malnutrition- (NUT_U5SMN.1.1)
 ELSIF p_indic_name = 'indic_NUT_U5SMN_1_1' THEN  IF
- p_record_x.malnutrition_age_months < 5
+ 
+ (p_record_x.start_nutrition_status = 'red' or p_record_x.start_nutrition_status = 'yellow' or p_record_x.start_nutrition_status = 'green') 
+
+ AND     (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE))
+  ) <=5
     
  THEN
 
@@ -7679,9 +7664,13 @@ END IF;
 
 -- Total number of children <5yrs screened for acute malnutrition- 6 - 23 months(NUT_U5SMN.1.2)
 ELSIF p_indic_name = 'indic_NUT_U5SMN_1_2' THEN  IF
- p_record_x.malnutrition_age_months <= 23
+ (p_record_x.start_nutrition_status = 'red' or p_record_x.start_nutrition_status = 'yellow' or p_record_x.start_nutrition_status = 'green') 
+
+ AND     (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 23
     
-        AND p_record_x.malnutrition_age_months >= 6
     
  THEN
 
@@ -7690,15 +7679,19 @@ END IF;
 
 -- Total number of children 24 - 59 months screened for acute malnutrition- (NUT_U5SMN.1.3)
 ELSIF p_indic_name = 'indic_NUT_U5SMN_1_3' THEN  IF
- p_record_x.malnutrition_age_months < 60
-    
-        AND p_record_x.malnutrition_age_months >= 24
+ (p_record_x.start_nutrition_status = 'red' or p_record_x.start_nutrition_status = 'yellow' or p_record_x.start_nutrition_status = 'green') 
+
+ AND     (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 24 AND 59
     
  THEN
 
     NUT_U5SMN_1_3 := 1;
 END IF;
 
+##HERE
 -- Number of children 0 - 5 months year screened and have moderate acute malnutrition- (NUT_U5SMN.MAM.1.1)
 ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_1' THEN  IF
  p_record_x.start_nutrition_status = 'yellow'
