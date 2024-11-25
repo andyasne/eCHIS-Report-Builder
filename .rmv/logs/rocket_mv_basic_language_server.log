@@ -69,3 +69,5 @@ Account{name=logs, path=C:/w/JoSI/POSTGRESS UCR/HMIS Dev/.git/logs, type=PREDICT
 Account{name=refs, path=C:/w/JoSI/POSTGRESS UCR/HMIS Dev/.git/refs, type=PREDICT}
 2024-11-25 00:30:31.755 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.account.AccountManager - [client:40010105]load account manager finish
 2024-11-25 00:30:31.757 [pool-3-thread-1] INFO  com.rs.mv.mvvs.instance.userspace.UserspaceManager - [framework:30010402]config file(C:\Users\andya/.rmv/config) watcher launch successful
+2024-11-25 11:33:32.838 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/w/JoSI/POSTGRESS UCR/HMIS Dev/Andinet)
+2024-11-25 11:33:45.206 [pool-3-thread-1] INFO  com.rs.mv.mvvs.client.catalog.from.scan.CurrentPathScanner - [client:400205]scan file in current open file directory(C:/w/JoSI/POSTGRESS UCR/HMIS Dev/Andinet)

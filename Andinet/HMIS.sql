@@ -8157,7 +8157,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_1' THEN  IF
     
         AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
     
-        AND p_record_x.age_months <= 5
+       AND       (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  )   <= 5
     
  THEN
 
@@ -8169,10 +8172,12 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_2' THEN  IF
  p_record_x.closed = True
     
         AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
+  and
+      (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months <= 23
     
  THEN
 
@@ -8184,10 +8189,12 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_SC_9_3' THEN  IF
  p_record_x.closed = True
     
         AND COALESCE(p_record_x.newest_sc_treatment_outcome, '') <> ''
+    and
+         (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
-        AND p_record_x.age_months >= 24
-    
-        AND p_record_x.age_months < 60
     
  THEN
 
@@ -8204,9 +8211,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_OTP' THEN  IF
     
         AND p_record_x.treatment_plan = 'OTP Follow-up'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+       (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
  THEN
 
@@ -8221,9 +8229,12 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Adt_OTP' THEN  IF
     
         AND p_record_x.treatment_plan = 'OTP Follow-up'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+          (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
+
+        
     
  THEN
 
