@@ -7695,8 +7695,12 @@ END IF;
 -- Number of children 0 - 5 months year screened and have moderate acute malnutrition- (NUT_U5SMN.MAM.1.1)
 ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_1' THEN  IF
  p_record_x.start_nutrition_status = 'yellow'
-    
-        AND p_record_x.age_months <= 5
+      
+ AND     (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  )<=5
+     
     
  THEN
 
@@ -7707,9 +7711,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_2' THEN  IF
  p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months <= 23
+        AND  (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 6 AND 23
     
  THEN
 
@@ -7720,9 +7725,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_U5SMN_MAM_1_3' THEN  IF
  p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.age_months >= 24
-    
-        AND p_record_x.age_months < 60
+        AND   (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 24 AND 60
     
  THEN
 
@@ -7733,7 +7739,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_1' THEN  IF
  p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months <= 5
+        AND(
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  ) <= 5
     
  THEN
 
@@ -7744,9 +7753,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_2' THEN  IF
  p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months <= 23
+        AND  (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  )BETWEEN 6 AND 23
     
  THEN
 
@@ -7757,9 +7767,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_U5SMN_SAM_1_3' THEN  IF
  p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 24
-    
-        AND p_record_x.age_months < 60
+        AND (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE))
+  ) BETWEEN 24 AND 59
     
  THEN
 
@@ -7770,9 +7781,12 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_1' THEN  IF
  p_record_x.closed = False
     
-        AND p_record_x.admit_in_sc = 'yes'
+        AND p_record_x.admit_in_sc = 'yes'  AND( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
     
-        AND p_record_x.age_months <= 5
+        AND(
+    DATE_PART('year', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE))
+  ) <= 5
     
  THEN
 
@@ -7784,11 +7798,14 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_2' THEN  IF
  p_record_x.closed = False
     
         AND p_record_x.admit_in_sc = 'yes'
-    
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
-    
+    and ( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
+and
+    (
+    DATE_PART('year', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE))
+  )BETWEEN 6 AND 23
+
+ 
  THEN
 
     NUT_TX_U5MN_SAM_Beging_SC_1_2 := 1;
@@ -7798,11 +7815,12 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Beging_SC_1_3' THEN  IF
  p_record_x.closed = False
     
-        AND p_record_x.admit_in_sc = 'yes'
-    
-        AND p_record_x.age_months <= 59
-    
-        AND p_record_x.age_months >= 24
+        AND p_record_x.admit_in_sc = 'yes'  and ( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
+    and
+    (
+    DATE_PART('year', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.beg_admission_date::DATE, p_record_x.dob::DATE))
+  )BETWEEN 24 AND 59
     
  THEN
 
@@ -7812,8 +7830,12 @@ END IF;
 -- Total number of children Age: 0 to 5 Months with SAM admitted to SC during the reporting period(new and re-admision)- (NUT_TX_U5MN_SAM__Adt_SC_2.1)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_1' THEN  IF
  p_record_x.admit_in_sc = 'yes'
-    
-        AND p_record_x.age_months <= 5
+and ( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
+and ( p_record_x.admission_category = 'new_case'  or p_record_x.admission_category = 'relapse'  )
+AND (
+    DATE_PART('year', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE))
+  ) <= 5
     
  THEN
 
@@ -7824,9 +7846,13 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_2' THEN  IF
  p_record_x.admit_in_sc = 'yes'
     
-        AND p_record_x.age_months <= 23
+  and ( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
+and ( p_record_x.admission_category = 'new_case'  or p_record_x.admission_category = 'relapse'  )
+AND (
+    DATE_PART('year', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE))
+  )BETWEEN 6 AND 23
     
-        AND p_record_x.age_months >= 6
     
  THEN
 
@@ -7837,9 +7863,15 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM__Adt_SC_2_3' THEN  IF
  p_record_x.admit_in_sc = 'yes'
     
-        AND p_record_x.age_months <= 59
+  
+  and ( p_record_x.treatment_location = 'health_center'  or p_record_x.treatment_location = 'hospital'  )
+and ( p_record_x.admission_category = 'new_case'  or p_record_x.admission_category = 'relapse'  )
+AND (
+    DATE_PART('year', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.admission_date::DATE, p_record_x.dob::DATE))
+  )BETWEEN 24 AND 59
     
-        AND p_record_x.age_months >= 24
+    
     
  THEN
 
@@ -7849,8 +7881,11 @@ END IF;
 -- Number of children Age: 0 to 5 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.1)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_1' THEN  IF
  p_record_x.newest_sc_treatment_outcome = 'stabilized'
-    
-        AND p_record_x.age_months <= 5
+
+        AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) <= 5
     
  THEN
 
@@ -7860,10 +7895,10 @@ END IF;
 -- Number of children Age: 6 - 23 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.2)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_2' THEN  IF
  p_record_x.newest_sc_treatment_outcome = 'stabilized'
-    
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+        AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
  THEN
 
@@ -7873,10 +7908,10 @@ END IF;
 -- Number of children Age: 24 - 59 Months stablized- (NUT_TX_U5MN_SAM_Stab_SC_3.3)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Stab_SC_3_3' THEN  IF
  p_record_x.newest_sc_treatment_outcome = 'stabilized'
-    
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
+   AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 60
     
  THEN
 
@@ -7888,9 +7923,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_1' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'cured'
-    
-        AND p_record_x.age_months <= 5
-    
+      AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) <=5
  THEN
 
     NUT_TX_U5MN_SAM_Cur_SC_4_1 := 1;
@@ -7901,10 +7937,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_2' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'cured'
-    
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+      AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
  THEN
 
@@ -7916,10 +7952,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_SC_4_3' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'cured'
-    
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
+  AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
  THEN
 
@@ -7932,7 +7968,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_1' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'dead'
     
-        AND p_record_x.age_months <= 5
+      AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) <=5
     
  THEN
 
@@ -7945,9 +7984,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_2' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'dead'
     
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+    AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 60
     
  THEN
 
@@ -7959,10 +7999,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_SC_5_3' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'dead'
+        AND(
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
     
  THEN
 
@@ -7974,9 +8015,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_1' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
-    
-        AND p_record_x.age_months <= 5
-    
+    and
+       (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) <=5
  THEN
 
     NUT_TX_U5MN_SAM_TO_SC_6_1 := 1;
@@ -7988,9 +8031,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_2' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
     
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+     (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
  THEN
 
@@ -8003,9 +8047,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_3' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
     
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
+    (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
  THEN
 
@@ -8018,7 +8063,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_1' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
     
-        AND p_record_x.age_months <= 5
+         (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  )   <= 5
     
  THEN
 
@@ -8031,9 +8079,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_2' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
     
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+     (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
  THEN
 
@@ -8045,11 +8094,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_3' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
-    
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
-    
+    and
+      (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
  THEN
 
     NUT_TX_U5MN_SAM_Def_SC_7_3 := 1;
@@ -8061,7 +8110,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_1' THEN  IF
     
         AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
     
-        AND p_record_x.age_months <= 5
+        AND       (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  )   <= 5
     
  THEN
 
@@ -8073,10 +8125,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_2' THEN  IF
  p_record_x.closed = True
     
         AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
-    
-        AND p_record_x.age_months <= 23
-    
-        AND p_record_x.age_months >= 6
+    and
+      (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 6 and 23
     
  THEN
 
@@ -8087,11 +8140,11 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_SC_8_3' THEN  IF
  p_record_x.closed = True
     
-        AND p_record_x.newest_sc_treatment_outcome = 'non_responder'
-    
-        AND p_record_x.age_months < 60
-    
-        AND p_record_x.age_months >= 24
+        AND p_record_x.newest_sc_treatment_outcome = 'non_responder'and
+          (
+    DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE))
+  ) between 24 and 59
     
  THEN
 
