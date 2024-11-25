@@ -7490,7 +7490,7 @@ END IF;
 -- Children Age: 12 to 59 Months who received vitamin A supplementation- (NUT_VITA.1.2)
 ELSIF p_indic_name = 'indic_NUT_VITA_1_2' THEN  IF
 
- 
+   
      (
     DATE_PART('year', AGE(p_record_x.Vitamin_A_second_dose_date::DATE, p_record_x.dob::DATE)) * 12
     + DATE_PART('month', AGE(p_record_x.Vitamin_A_second_dose_date::DATE, p_record_x.dob::DATE))
@@ -7533,7 +7533,7 @@ ELSIF p_indic_name = 'indic_NUT_DeW_1_1' THEN IF
     
         AND COALESCE(p_record_x.deworming_first_dose, '') <> ''
      
-           (
+           and (
     DATE_PART('year', AGE(p_record_x.deworming_first_dose_date::DATE, p_record_x.dob::DATE)) * 12
     + DATE_PART('month', AGE(p_record_x.deworming_first_dose_date::DATE, p_record_x.dob::DATE))
   ) BETWEEN 24 AND 59
@@ -7551,7 +7551,7 @@ ELSIF p_indic_name = 'indic_NUT_DeW_1_2' THEN IF
     
         AND COALESCE(p_record_x.deworming_second_dose, '') <> ''
      
-                   (
+           and        (
     DATE_PART('year', AGE(p_record_x.deworming_second_dose_date::DATE, p_record_x.dob::DATE)) * 12
     + DATE_PART('month', AGE(p_record_x.deworming_second_dose_date::DATE, p_record_x.dob::DATE))
   ) BETWEEN 24 AND 59
