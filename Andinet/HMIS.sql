@@ -8248,10 +8248,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_OTP_1' THEN  IF
         AND p_record_x.discharged_categories = 'cured'
     
         AND p_record_x.start_nutrition_status = 'red'
-    
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+       and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
+
     
  THEN
 
@@ -8266,9 +8267,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_OTP_2' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+       and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8283,9 +8285,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_OTP_3' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+    and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8300,9 +8303,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_OTP_4' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+        and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8316,10 +8320,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_OTP_5' THEN  IF
         AND p_record_x.discharged_categories = 'non_responder'
     
         AND p_record_x.start_nutrition_status = 'red'
-    
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+    and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8332,10 +8336,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Ext_OTP_E' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'red'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
-    
+      and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
  THEN
 
     NUT_TX_U5MN_SAM_Ext_OTP_E := 1;
@@ -8345,9 +8349,10 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN__MAM_Beging_OTP' THEN  IF
  p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.malnutrition_age_months >= 6
-    
-        AND p_record_x.malnutrition_age_months < 60
+     and  (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8360,9 +8365,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_MAM_Adt_TSFP' THEN  IF
     
         AND p_record_x.treatment_plan = 'IMAM/TSFP Follow-up'
     
-        AND p_record_x.malnutrition_age_months >= 6
-    
-        AND p_record_x.malnutrition_age_months < 60
+        and  (
+    DATE_PART('year', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.start_nutrition_status_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8377,10 +8383,11 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Cur_TSFP_1' THEN  IF
         AND p_record_x.discharged_categories = 'cured'
     
         AND p_record_x.start_nutrition_status = 'yellow'
+       and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
     
  THEN
 
@@ -8394,10 +8401,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_died_TSFP_2' THEN  IF
         AND p_record_x.discharged_categories = 'died'
     
         AND p_record_x.start_nutrition_status = 'yellow'
-    
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+        and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8412,9 +8419,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_TSFP_3' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+        and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8429,9 +8437,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_TSFP_4' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+       and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8445,10 +8454,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_NR_TSFP_5' THEN  IF
         AND p_record_x.closed = True
     
         AND p_record_x.start_nutrition_status = 'yellow'
-    
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+    and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
@@ -8463,9 +8472,10 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN__SAM_Ext_TSFP_E' THEN  IF
     
         AND p_record_x.start_nutrition_status = 'yellow'
     
-        AND p_record_x.age_months >= 6
-    
-        AND p_record_x.age_months < 60
+       and  (
+    DATE_PART('year', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE)) * 12
+    + DATE_PART('month', AGE(p_record_x.discharged_date::DATE, p_record_x.dob::DATE))
+  ) between 6 and 60
     
  THEN
 
