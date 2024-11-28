@@ -5,8 +5,8 @@ CREATE
 OR replace FUNCTION public.rpt_fn_compute_hmis_report_values(
   p_record_x record, record_hstore hstore, p_indic_name text
 ) RETURNS TABLE(
-  pregnant_women_received_anc_first_visit_by_gestational_week integer, number_of_slides_or_rdt_positive_for_malaria integer, pregnant_women_received_anc_first_visit_by_gw_less_than_16 integer, pregnant_women_received_anc_first_visit_by_gw_geq_to_16 integer, anc_1stv_ma_1_1 integer, anc_1stv_ma_1_2 integer, anc_1stv_ma_1_3 integer, number_of_pregnant_received_anc_first_visit integer, number_of_postnatal_visits_within_7_days integer, number_of_children_under_one_yr_received_bcg integer, number_of_children_under_two_yr_measles_second_dose integer, number_of_girls_9yr_received_first_dose_of_human_papilloma integer, number_of_women_who_have_received_tt1_vaccination integer, number_of_women_who_have_received_tt2_vaccination integer, number_of_women_who_have_received_tt3_vaccination integer, number_of_women_who_have_received_tt4_vaccination integer, number_of_women_who_have_received_tt5_vaccination integer, children_who_treated_for_diarrhea_by_ors_and_zinc integer, children_who_treated_for_diarrhea_by_ors integer, fp_contraceptive_acceptance_rate integer, fp_new_at_10_to_14 integer, fp_new_at_15_to_19 integer, fp_new_at_20_to_24 integer, fp_new_at_25_to_29 integer, fp_new_at_30_to_49 integer, fp_repeat_at_10_to_14 integer, fp_repeat_at_15_to_19 integer, fp_repeat_at_20_to_24 integer, fp_repeat_at_25_to_29 integer, fp_repeat_at_30_to_49 integer, fp_new_oral_contraceptives integer, fp_new_injectables integer, fp_new_implants integer, fp_new_iucd integer, fp_repeat_oral_contraceptives integer, fp_repeat_injectables integer, fp_repeat_implants integer, fp_repeat_iucd integer, fp_at_10_to_14 integer, fp_at_15_to_19 integer, fp_at_20_to_24 integer, fp_at_25_to_29 integer, fp_at_30_to_49 integer, fp_oral_contraceptives integer, fp_implants integer, fp_iucd integer, still_births integer, still_live integer, postnatal_0_24 integer, postnatal_25_48 integer, postnatal_49_72 integer, postnatal_73_168 integer, deaths_of_home integer, deaths_on_the_way integer, deaths_at_health_post integer, penta1 integer, penta3 integer, pcv1 integer, pcv3 integer, ipv integer, rota1 integer, rota2 integer, measles_1 integer, infants_whose_mother integer, fp_car_mtd_2_7 integer, fp_ippf_mtd_5 integer, mal_dx1 integer, l_d_sba_1 integer, number_of_under_5__pnemonia integer, chim_vsd_1 integer, chim_vsd_2 integer, antenatal_care_coverage_four_visits_from_gte_20_yr integer, anc_4thv_ma_1_1 integer, antenatal_care_coverage_four_visits_from_15_19_yr integer, number_of_pregnant_received_anc_four_visit integer, nch_chim_pnrx integer, nch_chim_asfxrs integer, mat_car_mtd_1_7 integer, mat_car_mtd_2_7 integer, fp_ippf_mtd_5_ integer, mat_lafppr_1_1 integer, mat_lafppr_1_2 integer, mat_lafppr_1_3 integer, mat_tlafpr_ integer, mat_anc1_ga_1_1 integer, mat_anc4__ga_1_1 integer, mat_anc4__ga_1_2 integer, mat_b_d_cbn_1_ integer, mat_b_d_cdn_2_ integer, mat_epnc_1 integer, mat_epnc_1_1 integer, mat_epnc_1_3 integer, mat_epnc_1_4 integer, mat_epnc_1_5 integer, ch_cnd_lb_kebele_ integer, ch_tx_syi_1_3 integer, ch_asph_2_ integer, ch_chx_1_ integer, epi_opv1_1_ integer, epi_opv3_1_ integer, epi_fi_1_ integer, epi_vwr_bcg_giv_ integer, epi_vwr_bcg_dam_ integer, epi_vwr_bcg_dis_ integer, epi_vwr_penta_dam_ integer, epi_vwr_penta_dis_ integer, epi_vwr_pcv_dam_ integer, epi_vwr_pcv_dis_ integer, epi_vwr_rt_dam_ integer, epi_vwr_rt_dis_ integer, epi_vwr_pv_dam_ integer, epi_vwr_pv_dis_ integer, epi_vwr_mcv_dam_ integer, epi_vwr_mcv_dis_ integer, epi_vwr_ipv_giv_ integer, epi_vwr_ipv_dam_ integer, epi_vwr_ipv_dis_ integer, epi_vwr_hpv_giv_ integer, suspected_lymphedema integer, refered_suspected_lymphedema integer, suspected_trachomatous_trichiasis integer, refered_trachomatous_trichiasis integer, suspected_schistosomiasis integer, refered_suspected_schistosomiasis integer, suspected_cutaneous_leishmaniasis integer, refered_suspected_cutaneous_leishmaniasis integer, suspected_scabies integer, refered_suspected_scabies integer, suspected_human_guinea_worm integer, refered_suspected__human_guinea_worm integer, totnum_swallowed_azithromycin_or_took_tetracycline_eye_ointment integer, ivermectin integer, lymphatic_filariasis integer, prevent_schistosomiasis integer, prevent_soil_transmitted_helminthiasis integer, prevent_schistosomiasis_gt integer, ntd_tr_1_1 integer, ntd_tr_1_2 integer, ntd_tr_1_3 integer, ntd_tr_1_4 integer, ntd_tr_1_5 integer, ntd_tr_1_6 integer, ntd_tr_1_7 integer, ntd_tr_1_8 integer, ntd_onch_1_1 integer, ntd_onch_1_2 integer, ntd_onch_1_3 integer, ntd_onch_1_4 integer, ntd_lf_1_1 integer, ntd_lf_1_2 integer, ntd_lf_1_3 integer, ntd_lf_1_4 integer, ntd_sch_1_1 integer, ntd_sch_1_2 integer, ntd_sch_1_3 integer, ntd_sch_1_4 integer, ntd_sth_1_1 integer, ntd_sth_1_2 integer, ntd_sth_1_3 integer, ntd_sth_1_4 integer, ntd_sth_1_5 integer, ntd_sth_1_6 integer, nct_htn_1 integer, nct_htn_2 integer, nct_htn_3 integer, nct_htn_4 integer, nct_htn_5 integer, nct_htn_6 integer, nct_htn_7 integer, nct_htn_8 integer, ncd_htndx_1_2_1 integer, ncd_htndx_1_2_2 integer, ncd_htndx_1_2_3 integer, ncd_dmdx_1_2_1 integer, ncd_dmdx_1_2_2 integer, ncd_dmdx_1_2_3 integer, ncd_dmdx_1_2_4 integer, confirmed_malaria_cases_ftat integer, confirmed_malaria_cases_hp integer, households_investigated integer, entitled_for_finger_prick integer, received_finger_prick integer, confirmed_malaria_cases integer, confirmed_malaria_cases_plasmodium_falciparium integer, confirmed_malaria_cases_plasmodium_vivax integer, confirmed_malaria_cases_mixed integer, cases_with_travel_history integer, cases_without_travel_history integer, number_of_households_sprayed integer, number_people_protected_by_chemical_spray integer, chemical_used_in_kg integer, bednet_usage integer, llitn_properly_used integer, suspected_and_tested_with_rdt integer, total_malaria_cases_confirmed_rdt integer, rdt_confirmed_malaria_cases_pf integer, rdt_confirmed_malaria_cases_pv integer, malaria_cases_under_5 integer, malaria_cases_5_to_14 integer, malaria_cases_over_15 integer, positive_pregant_mothers integer, rdt_positive_for_malaria integer, rdt_positive_for_malaria_male_under_5 integer, rdt_positive_for_malaria_female_under_5 integer, rdt_positive_for_malaria_male_over_5_under_14 integer, rdt_positive_for_malaria_female_over_5_under_14 integer, rdt_positive_for_malaria_male_over_15 integer, rdt_positive_for_malaria_female_over_15 integer, rdt_performed_for_malaria_diagnosis integer, malaria_positive_clients integer, malaria_positive_clients_under_1 integer, malaria_positive_clients_under_1_new integer, malaria_positive_clients_under_1_repeat integer, malaria_positive_clients_over_1_under_4 integer, malaria_positive_clients_over_1_under_4_new integer, malaria_positive_clients_over_1_under_4_repeat integer, malaria_positive_clients_over_5_under_14 integer, malaria_positive_clients_over_5_under_14_new integer, malaria_positive_clients_over_5_under_14_repeat integer, malaria_positive_clients_over_15 integer, malaria_positive_clients_over_15_new integer, malaria_positive_clients_over_15_repeat integer, hp_positive_malaria_pregnant_women integer, malaria_suspect_but_not_tested integer, malaria_suspect_tested integer, breeding_site integer, breeding_site_permanent integer, breeding_site_temporary integer, larva_control integer, larva_control_in_sq_km integer, larva_control_number_of_times integer, compacting_activity integer, compacting_activity_in_sq_km integer, compacting_activity_number_of_times integer, clearing_activity integer, clearing_activity_in_sq_km integer, clearing_activity_number_of_times integer, filling_activity integer, filling_activity_in_sq_km integer, filling_activity_number_of_times integer, households_who_own_bednets integer, households_who_own_but_not_use integer, households_with_no_bednets integer, peoples_involved_in_prevention integer, males_involved_in_prevention integer, females_involved_in_prevention integer, organizations_involved_in_prevention integer, people_who_took_behav_change_comm_training integer, male_who_took_behav_change_comm_training integer, female_who_took_behav_change_comm_training integer, organizations_who_took_behav_change_comm_training integer, households_eligible_delineated_for_investigation integer, individuals_living_in_index_case integer, mal_1 integer, mal_2 integer, mal_3 integer, mal_4 integer, mal_5 integer, mal_6 integer, mal_pos_1_1 integer, mal_pos_1_2 integer, mal_pos_1_3 integer, mal_pos_1_4 integer, mal_pos_1_5 integer, mal_pos_1_6 integer, mal_travel_ integer, fp_cyp_1 integer, fp_cyp_3 integer, fp_cyp_5 integer, fp_cyp_8 integer, fp_cyp_9 integer, fp_cyp_10 integer, mal_llitn_1 integer, mal_ellitn_1 integer, total_confirmed_malaria_cases integer, number_of_confirmed_malaria_cases_within_hp_catchment integer, number_of_confirmed_malaria_cases_outside_hp_catchment integer, number_of_index_cases_eligible_for_investigation integer, number_of_index_cases_investigated integer, number_of_households_eligible_delineated_for_investigation integer, hh_members_eligible_butnot_indexcases integer, number_of_household_members_tested integer, number_of_households_investigated integer, total_number_of_positive_cases_secondary integer, total_number_of_pf_cases integer, total_number_of_pv_cases integer, total_number_of_mixed_cases integer, imported_cases__cases_with_travel_history integer, indigenous_or_local_cases_cases_without_travel_history integer, suspected_trachomatous_trichiasis_referral integer, suspected_tcutaneous_leishmaniasis integer, suspected_tcutaneous_leishmaniasis_referral integer, suspected_guinea_worm integer, suspected_guinea_worm_referral integer, num_tt_medication integer, num_oncho_medication integer, num_lf_medication integer, num_sch_medication integer, num_sth_medication_child integer, num_sth_medication_adult integer, tb_1 integer, tb_2 integer, tb_3 integer, tb_4 integer, tb_5 integer, tb_6 integer, tb_7 integer, tb_8 integer, tb_9 integer, tb_10 integer, tb_11 integer, tb_12 integer, tb_13 integer, tb_14 integer, tb_15 integer, tb_16 integer, tb_17 integer, tb_18 integer, tb_19 integer, tb_20 integer, tb_tx_ptb_2_1 integer, tb_tx_ptb_2_2 integer, tb_tx_ptb_2_3 integer, tb_tx_ptb_2_4 integer, tb_tx_ptb_2_5 integer, tb_tx_ptb_2_6 integer, tb_tx_ptb_2_7 integer, tb_tx_ptb_2_8 integer, tb_tx_ptb_2_9 integer, tb_tx_ptb_2_10 integer, tb_tx_ptb_2_11 integer, tb_tx_ptb_2_12 integer, tb_tx_ptb_2_13 integer, tb_tx_ptb_2_14 integer, tb_tx_ptb_2_15 integer, tb_tx_ptb_2_16 integer, tb_tx_ptb_2_17 integer, tb_tx_ptb_2_18 integer, tb_tx_ptb_2_19 integer, tb_tx_ptb_2_20 integer, tb_tx_eptb_1_1 integer, tb_tx_eptb_1_2 integer, tb_tx_eptb_1_3 integer, tb_tx_eptb_1_4 integer, tb_tx_eptb_1_5 integer, tb_tx_eptb_1_6 integer, tb_tx_eptb_1_7 integer, tb_tx_eptb_1_8 integer, tb_tx_eptb_1_9 integer, tb_tx_eptb_1_10 integer, tb_tx_eptb_1_11 integer, tb_tx_eptb_1_12 integer, tb_tx_eptb_1_13 integer, tb_tx_eptb_1_14 integer, tb_tx_eptb_1_15 integer, tb_tx_eptb_1_16 integer, tb_tx_eptb_1_17 integer, tb_tx_eptb_1_18 integer, tb_tx_eptb_1_19 integer, tb_tx_eptb_1_20 integer, tb_cr_ptb_1_1_1 integer, tb_cr_ptb_1_1_2 integer, tb_cr_ptb_1_1_3 integer, tb_cr_ptb_1_1_4 integer, tb_cr_ptb_1_1_5 integer, tb_cr_pntb_2_1_1 integer, tb_cr_pntb_2_1_2 integer, tb_cr_pntb_2_1_3 integer, tb_cr_pntb_2_1_4 integer, tb_cr_pntb_2_1_5 integer, tb_cr_eptb_3_1_1 integer, tb_cr_eptb_3_1_2 integer, tb_cr_eptb_3_1_3 integer, tb_cr_eptb_3_1_4 integer, tb_cr_eptb_3_1_5 integer, tb_comm_ integer, tb_cbtsr_2_ integer, tb_ci_1_1_1 integer, tb_ci_1_1_2 integer, tb_ci_1_1_3 integer, tb_ci_1_2_1 integer, tb_ci_1_2_2 integer, tb_ci_1_2_3 integer, tb_ci_scr_1_1 integer, tb_ci_scr_1_2 integer, tb_ci_scr_1_3 integer, tb_ci_scr_2_1 integer, tb_ci_scr_2_2 integer, tb_ci_scr_2_3 integer, tb_tpt_1 integer, tb_tpt_2 integer, tb_tpt_3 integer, tb_tpt_1_4_1 integer, tb_tpt_1_4_2 integer, tb_tpt_1_4_3 integer, tb_dst_1_1 integer, tb_dr_nut_1_1 integer, tb_dr_nut_1_2 integer, tb_dr_nut_1_3 integer, leprosy_case_notification__all_leprosy_case_detected integer, leprosy_case_notification__male integer, leprosy_case_notification_female integer, leprosy_case_notification_new_leprosy_cases_detected_ integer, leprosy_case_notification_pb_male_lt_15_yrs integer, leprosy_case_notification_pb_male_gte_15_yrs integer, leprosy_case_notification_pb_female_lt_15_yrs integer, leprosy_case_notification_pb_female_gte_15_yrs integer, leprosy_case_notification_mb__male_lt_15_yrs integer, leprosy_case_notification_mb__male_gte_15_yrs integer, leprosy_case_notification_mb__female_lt__15_yrs integer, leprosy_case_notification_mb__female_gte_15_yrs integer, grade_ii_disability_rate integer, grade_ii_disability_rate_among_new_cases_of_leprosy_male_lt_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_male_gte_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_fem_gt_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_fem_gte_15 integer, lep_not__1_1_1 integer, lep_not__1_1_2 integer, lep_not__1_1_3 integer, lep_not__1_1_4 integer, lep_not__1_1_5_1 integer, lep_not__1_1_5_2 integer, lep_not__1_1_5_3 integer, lep_not__1_1_5_4 integer, lep_dis_1_1 integer, lep_dis_1_2 integer, lep_dis_1_3 integer, lep_dis_1_4 integer, lep_tx_2_ integer, lep_tx_3_ integer, lep_tx_4_ integer, lep_tx_5_ integer, xsum integer, ms_opd_numov_1_1 integer, ms_opd_numov_1_2 integer, ms_opd_numov_1_3 integer, ms_opd_numov_1_4 integer, ms_opd_numov_1_5 integer, ms_opd_numov_1_6 integer, ms_opd_numov_1_7 integer, ms_opd_numov_1_8 integer, ms_opd_numov_1_9 integer, ms_opd_numov_1_10 integer, ms_opd_numov_1_11 integer, ms_opd_numov_1_12 integer, ms_opd_numov_1_13 integer, ms_opd_numov_1_14 integer, ms_opd_numov_2 integer, hcsm_eda_tdr integer, pms_avail_1_26_ integer, pms_avail_1_27_ integer, pms_avail_1_28_ integer, pms_avail_1_29_ integer, pms_avail_1_30_ integer, pms_avail_1_31_ integer, pms_avail_1_32_ integer, pms_avail_1_33_ integer, suspected_schistosomiasis_referral integer, suspected_scabies_referral integer, CHIM_ECND_2_1 integer, CHIM_ECND_2_2 integer, CHIM_ECND_2_3 integer, CHIM_ECND_1_1 integer, CHIM_ECND_1_2 integer, CHIM_ECND_1 integer, EPI_VWR_Penta_giv_ integer, NTR_LBW_1_ integer, NTR_LBW_2_ integer, NTR_GMP_1 integer, NTR_GMP_2 integer, NTR_GMP_MM_1 integer, NTR_GMP_MM_2 integer, GMP_SM_1 integer, GMP_SM_2 integer, NUT_VITA_1_1 integer, NUT_VITA_1_2 integer, NUT_VITA_2_1 integer, NUT_VITA_2_2 integer, NUT_DeW_1_1 integer, NUT_DeW_1_2 integer, NUT_DeW_2 integer, NUT_IFA_1_1 integer, NUT_IFA_1_2 integer, NUT_IFA_1_3 integer, PLW_S4AM integer, PLW_S4AM_1 integer, PLW_S4AM_2 integer, NUT_PreSMN_2_1 integer, NUT_PreSMN_2_2 integer, NUT_U5SMN_1_1 integer, NUT_U5SMN_1_2 integer, NUT_U5SMN_1_3 integer, NUT_U5SMN_MAM_1_1 integer, NUT_U5SMN_MAM_1_2 integer, NUT_U5SMN_MAM_1_3 integer, NUT_U5SMN_SAM_1_1 integer, NUT_U5SMN_SAM_1_2 integer, NUT_U5SMN_SAM_1_3 integer, NUT_TX_U5MN_SAM_Beging_SC_1_1 integer, NUT_TX_U5MN_SAM_Beging_SC_1_2 integer, NUT_TX_U5MN_SAM_Beging_SC_1_3 integer, NUT_TX_U5MN_SAM__Adt_SC_2_1 integer, NUT_TX_U5MN_SAM__Adt_SC_2_2 integer, NUT_TX_U5MN_SAM__Adt_SC_2_3 integer, NUT_TX_U5MN_SAM_Stab_SC_3_1 integer, NUT_TX_U5MN_SAM_Stab_SC_3_2 integer, NUT_TX_U5MN_SAM_Stab_SC_3_3 integer, NUT_TX_U5MN_SAM_Cur_SC_4_1 integer, NUT_TX_U5MN_SAM_Cur_SC_4_2 integer, NUT_TX_U5MN_SAM_Cur_SC_4_3 integer, NUT_TX_U5MN_SAM_died_SC_5_1 integer, NUT_TX_U5MN_SAM_died_SC_5_2 integer, NUT_TX_U5MN_SAM_died_SC_5_3 integer, NUT_TX_U5MN_SAM_TO_SC_6_1 integer, NUT_TX_U5MN_SAM_TO_SC_6_2 integer, NUT_TX_U5MN_SAM_TO_SC_6_3 integer, NUT_TX_U5MN_SAM_Def_SC_7_1 integer, NUT_TX_U5MN_SAM_Def_SC_7_2 integer, NUT_TX_U5MN_SAM_Def_SC_7_3 integer, NUT_TX_U5MN_SAM_NR_SC_8_1 integer, NUT_TX_U5MN_SAM_NR_SC_8_2 integer, NUT_TX_U5MN_SAM_NR_SC_8_3 integer, NUT_TX_U5MN_SAM_Ext_SC_9_1 integer, NUT_TX_U5MN_SAM_Ext_SC_9_2 integer, NUT_TX_U5MN_SAM_Ext_SC_9_3 integer, NUT_TX_U5MN_SAM_OTP integer, NUT_TX_U5MN_SAM_Adt_OTP integer, NUT_TX_U5MN_SAM_Cur_OTP_1 integer, NUT_TX_U5MN_SAM_died_OTP_2 integer, NUT_TX_U5MN_SAM_TO_OTP_3 integer, NUT_TX_U5MN_SAM_Def_OTP_4 integer, NUT_TX_U5MN_SAM_NR_OTP_5 integer, NUT_TX_U5MN_SAM_Ext_OTP_E integer, NUT_TX_U5MN__MAM_Beging_OTP integer, NUT_TX_U5MN_MAM_Adt_TSFP integer, NUT_TX_U5MN_SAM_Cur_TSFP_1 integer, NUT_TX_U5MN_SAM_died_TSFP_2 integer, NUT_TX_U5MN_SAM_TO_TSFP_3 integer, NUT_TX_U5MN_SAM_Def_TSFP_4 integer, NUT_TX_U5MN_SAM_NR_TSFP_5 integer, NUT_TX_U5MN__SAM_Ext_TSFP_E integer, NUT_TX_U5MN_MAM_Beging_OTP integer, NUT_TX_U5MN_MAM_Adt_OTP integer, NUT_TX_U5MN_Cur_TSFP_1 integer, NUT_TX_U5MN_died_TSFP_2 integer, NUT_TX_U5MN_TO_TSFP_3 integer, NUT_TX_U5MN__Def_TSFP_4 integer, NUT_TX_U5MN_MAM__NR_TSFP_5 integer, NUT_TX_U5MN_MAM_Ext_TSFP_E integer, NUT_DeW_Numerator integer, NUT_TX_U5MN_SAM_us_OTP_8_ integer, NUT_TX_U5MN_SAM_US_TSFP_8_ integer
-
+  pregnant_women_received_anc_first_visit_by_gestational_week integer, number_of_slides_or_rdt_positive_for_malaria integer, pregnant_women_received_anc_first_visit_by_gw_less_than_16 integer, pregnant_women_received_anc_first_visit_by_gw_geq_to_16 integer, anc_1stv_ma_1_1 integer, anc_1stv_ma_1_2 integer, anc_1stv_ma_1_3 integer, number_of_pregnant_received_anc_first_visit integer, number_of_postnatal_visits_within_7_days integer, number_of_children_under_one_yr_received_bcg integer, number_of_children_under_two_yr_measles_second_dose integer, number_of_girls_9yr_received_first_dose_of_human_papilloma integer, number_of_women_who_have_received_tt1_vaccination integer, number_of_women_who_have_received_tt2_vaccination integer, number_of_women_who_have_received_tt3_vaccination integer, number_of_women_who_have_received_tt4_vaccination integer, number_of_women_who_have_received_tt5_vaccination integer, children_who_treated_for_diarrhea_by_ors_and_zinc integer, children_who_treated_for_diarrhea_by_ors integer, fp_contraceptive_acceptance_rate integer, fp_new_at_10_to_14 integer, fp_new_at_15_to_19 integer, fp_new_at_20_to_24 integer, fp_new_at_25_to_29 integer, fp_new_at_30_to_49 integer, fp_repeat_at_10_to_14 integer, fp_repeat_at_15_to_19 integer, fp_repeat_at_20_to_24 integer, fp_repeat_at_25_to_29 integer, fp_repeat_at_30_to_49 integer, fp_new_oral_contraceptives integer, fp_new_injectables integer, fp_new_implants integer, fp_new_iucd integer, fp_repeat_oral_contraceptives integer, fp_repeat_injectables integer, fp_repeat_implants integer, fp_repeat_iucd integer, fp_at_10_to_14 integer, fp_at_15_to_19 integer, fp_at_20_to_24 integer, fp_at_25_to_29 integer, fp_at_30_to_49 integer, fp_oral_contraceptives integer, fp_implants integer, fp_iucd integer, still_births integer, still_live integer, postnatal_0_24 integer, postnatal_25_48 integer, postnatal_49_72 integer, postnatal_73_168 integer, deaths_of_home integer, deaths_on_the_way integer, deaths_at_health_post integer, penta1 integer, penta3 integer, pcv1 integer, pcv3 integer, ipv integer, rota1 integer, rota2 integer, measles_1 integer, infants_whose_mother integer, fp_car_mtd_2_7 integer, fp_ippf_mtd_5 integer, mal_dx1 integer, l_d_sba_1 integer, number_of_under_5__pnemonia integer, chim_vsd_1 integer, chim_vsd_2 integer, antenatal_care_coverage_four_visits_from_gte_20_yr integer, anc_4thv_ma_1_1 integer, antenatal_care_coverage_four_visits_from_15_19_yr integer, number_of_pregnant_received_anc_four_visit integer, nch_chim_pnrx integer, nch_chim_asfxrs integer, mat_car_mtd_1_7 integer, mat_car_mtd_2_7 integer, fp_ippf_mtd_5_ integer, mat_lafppr_1_1 integer, mat_lafppr_1_2 integer, mat_lafppr_1_3 integer, mat_tlafpr_ integer, mat_anc1_ga_1_1 integer, mat_anc4__ga_1_1 integer, mat_anc4__ga_1_2 integer, mat_b_d_cbn_1_ integer, mat_b_d_cdn_2_ integer, mat_epnc_1 integer, mat_epnc_1_1 integer, mat_epnc_1_3 integer, mat_epnc_1_4 integer, mat_epnc_1_5 integer, ch_cnd_lb_kebele_ integer, ch_tx_syi_1_3 integer, ch_asph_2_ integer, ch_chx_1_ integer, epi_opv1_1_ integer, epi_opv3_1_ integer, epi_fi_1_ integer, epi_vwr_bcg_giv_ integer, epi_vwr_bcg_dam_ integer, epi_vwr_bcg_dis_ integer, epi_vwr_penta_dam_ integer, epi_vwr_penta_dis_ integer, epi_vwr_pcv_dam_ integer, epi_vwr_pcv_dis_ integer, epi_vwr_rt_dam_ integer, epi_vwr_rt_dis_ integer, epi_vwr_pv_dam_ integer, epi_vwr_pv_dis_ integer, epi_vwr_mcv_dam_ integer, epi_vwr_mcv_dis_ integer, epi_vwr_ipv_giv_ integer, epi_vwr_ipv_dam_ integer, epi_vwr_ipv_dis_ integer, epi_vwr_hpv_giv_ integer, suspected_lymphedema integer, refered_suspected_lymphedema integer, suspected_trachomatous_trichiasis integer, refered_trachomatous_trichiasis integer, suspected_schistosomiasis integer, refered_suspected_schistosomiasis integer, suspected_cutaneous_leishmaniasis integer, refered_suspected_cutaneous_leishmaniasis integer, suspected_scabies integer, refered_suspected_scabies integer, suspected_human_guinea_worm integer, refered_suspected__human_guinea_worm integer, totnum_swallowed_azithromycin_or_took_tetracycline_eye_ointment integer, ivermectin integer, lymphatic_filariasis integer, prevent_schistosomiasis integer, prevent_soil_transmitted_helminthiasis integer, prevent_schistosomiasis_gt integer, ntd_tr_1_1 integer, ntd_tr_1_2 integer, ntd_tr_1_3 integer, ntd_tr_1_4 integer, ntd_tr_1_5 integer, ntd_tr_1_6 integer, ntd_tr_1_7 integer, ntd_tr_1_8 integer, ntd_onch_1_1 integer, ntd_onch_1_2 integer, ntd_onch_1_3 integer, ntd_onch_1_4 integer, ntd_lf_1_1 integer, ntd_lf_1_2 integer, ntd_lf_1_3 integer, ntd_lf_1_4 integer, ntd_sch_1_1 integer, ntd_sch_1_2 integer, ntd_sch_1_3 integer, ntd_sch_1_4 integer, ntd_sth_1_1 integer, ntd_sth_1_2 integer, ntd_sth_1_3 integer, ntd_sth_1_4 integer, ntd_sth_1_5 integer, ntd_sth_1_6 integer, nct_htn_1 integer, nct_htn_2 integer, nct_htn_3 integer, nct_htn_4 integer, nct_htn_5 integer, nct_htn_6 integer, nct_htn_7 integer, nct_htn_8 integer, ncd_htndx_1_2_1 integer, ncd_htndx_1_2_2 integer, ncd_htndx_1_2_3 integer, ncd_dmdx_1_2_1 integer, ncd_dmdx_1_2_2 integer, ncd_dmdx_1_2_3 integer, ncd_dmdx_1_2_4 integer, confirmed_malaria_cases_ftat integer, confirmed_malaria_cases_hp integer, households_investigated integer, entitled_for_finger_prick integer, received_finger_prick integer, confirmed_malaria_cases integer, confirmed_malaria_cases_plasmodium_falciparium integer, confirmed_malaria_cases_plasmodium_vivax integer, confirmed_malaria_cases_mixed integer, cases_with_travel_history integer, cases_without_travel_history integer, number_of_households_sprayed integer, number_people_protected_by_chemical_spray integer, chemical_used_in_kg integer, bednet_usage integer, llitn_properly_used integer, suspected_and_tested_with_rdt integer, total_malaria_cases_confirmed_rdt integer, rdt_confirmed_malaria_cases_pf integer, rdt_confirmed_malaria_cases_pv integer, malaria_cases_under_5 integer, malaria_cases_5_to_14 integer, malaria_cases_over_15 integer, positive_pregant_mothers integer, rdt_positive_for_malaria integer, rdt_positive_for_malaria_male_under_5 integer, rdt_positive_for_malaria_female_under_5 integer, rdt_positive_for_malaria_male_over_5_under_14 integer, rdt_positive_for_malaria_female_over_5_under_14 integer, rdt_positive_for_malaria_male_over_15 integer, rdt_positive_for_malaria_female_over_15 integer, rdt_performed_for_malaria_diagnosis integer, malaria_positive_clients integer, malaria_positive_clients_under_1 integer, malaria_positive_clients_under_1_new integer, malaria_positive_clients_under_1_repeat integer, malaria_positive_clients_over_1_under_4 integer, malaria_positive_clients_over_1_under_4_new integer, malaria_positive_clients_over_1_under_4_repeat integer, malaria_positive_clients_over_5_under_14 integer, malaria_positive_clients_over_5_under_14_new integer, malaria_positive_clients_over_5_under_14_repeat integer, malaria_positive_clients_over_15 integer, malaria_positive_clients_over_15_new integer, malaria_positive_clients_over_15_repeat integer, hp_positive_malaria_pregnant_women integer, malaria_suspect_but_not_tested integer, malaria_suspect_tested integer, breeding_site integer, breeding_site_permanent integer, breeding_site_temporary integer, larva_control integer, larva_control_in_sq_km integer, larva_control_number_of_times integer, compacting_activity integer, compacting_activity_in_sq_km integer, compacting_activity_number_of_times integer, clearing_activity integer, clearing_activity_in_sq_km integer, clearing_activity_number_of_times integer, filling_activity integer, filling_activity_in_sq_km integer, filling_activity_number_of_times integer, households_who_own_bednets integer, households_who_own_but_not_use integer, households_with_no_bednets integer, peoples_involved_in_prevention integer, males_involved_in_prevention integer, females_involved_in_prevention integer, organizations_involved_in_prevention integer, people_who_took_behav_change_comm_training integer, male_who_took_behav_change_comm_training integer, female_who_took_behav_change_comm_training integer, organizations_who_took_behav_change_comm_training integer, households_eligible_delineated_for_investigation integer, individuals_living_in_index_case integer, mal_1 integer, mal_2 integer, mal_3 integer, mal_4 integer, mal_5 integer, mal_6 integer, mal_pos_1_1 integer, mal_pos_1_2 integer, mal_pos_1_3 integer, mal_pos_1_4 integer, mal_pos_1_5 integer, mal_pos_1_6 integer, mal_travel_ integer, fp_cyp_1 integer, fp_cyp_3 integer, fp_cyp_5 integer, fp_cyp_8 integer, fp_cyp_9 integer, fp_cyp_10 integer, mal_llitn_1 integer, mal_ellitn_1 integer, total_confirmed_malaria_cases integer, number_of_confirmed_malaria_cases_within_hp_catchment integer, number_of_confirmed_malaria_cases_outside_hp_catchment integer, number_of_index_cases_eligible_for_investigation integer, number_of_index_cases_investigated integer, number_of_households_eligible_delineated_for_investigation integer, hh_members_eligible_butnot_indexcases integer, number_of_household_members_tested integer, number_of_households_investigated integer, total_number_of_positive_cases_secondary integer, total_number_of_pf_cases integer, total_number_of_pv_cases integer, total_number_of_mixed_cases integer, imported_cases__cases_with_travel_history integer, indigenous_or_local_cases_cases_without_travel_history integer, suspected_trachomatous_trichiasis_referral integer, suspected_tcutaneous_leishmaniasis integer, suspected_tcutaneous_leishmaniasis_referral integer, suspected_guinea_worm integer, suspected_guinea_worm_referral integer, num_tt_medication integer, num_oncho_medication integer, num_lf_medication integer, num_sch_medication integer, num_sth_medication_child integer, num_sth_medication_adult integer, tb_1 integer, tb_2 integer, tb_3 integer, tb_4 integer, tb_5 integer, tb_6 integer, tb_7 integer, tb_8 integer, tb_9 integer, tb_10 integer, tb_11 integer, tb_12 integer, tb_13 integer, tb_14 integer, tb_15 integer, tb_16 integer, tb_17 integer, tb_18 integer, tb_19 integer, tb_20 integer, tb_tx_ptb_2_1 integer, tb_tx_ptb_2_2 integer, tb_tx_ptb_2_3 integer, tb_tx_ptb_2_4 integer, tb_tx_ptb_2_5 integer, tb_tx_ptb_2_6 integer, tb_tx_ptb_2_7 integer, tb_tx_ptb_2_8 integer, tb_tx_ptb_2_9 integer, tb_tx_ptb_2_10 integer, tb_tx_ptb_2_11 integer, tb_tx_ptb_2_12 integer, tb_tx_ptb_2_13 integer, tb_tx_ptb_2_14 integer, tb_tx_ptb_2_15 integer, tb_tx_ptb_2_16 integer, tb_tx_ptb_2_17 integer, tb_tx_ptb_2_18 integer, tb_tx_ptb_2_19 integer, tb_tx_ptb_2_20 integer, tb_tx_eptb_1_1 integer, tb_tx_eptb_1_2 integer, tb_tx_eptb_1_3 integer, tb_tx_eptb_1_4 integer, tb_tx_eptb_1_5 integer, tb_tx_eptb_1_6 integer, tb_tx_eptb_1_7 integer, tb_tx_eptb_1_8 integer, tb_tx_eptb_1_9 integer, tb_tx_eptb_1_10 integer, tb_tx_eptb_1_11 integer, tb_tx_eptb_1_12 integer, tb_tx_eptb_1_13 integer, tb_tx_eptb_1_14 integer, tb_tx_eptb_1_15 integer, tb_tx_eptb_1_16 integer, tb_tx_eptb_1_17 integer, tb_tx_eptb_1_18 integer, tb_tx_eptb_1_19 integer, tb_tx_eptb_1_20 integer, tb_cr_ptb_1_1_1 integer, tb_cr_ptb_1_1_2 integer, tb_cr_ptb_1_1_3 integer, tb_cr_ptb_1_1_4 integer, tb_cr_ptb_1_1_5 integer, tb_cr_pntb_2_1_1 integer, tb_cr_pntb_2_1_2 integer, tb_cr_pntb_2_1_3 integer, tb_cr_pntb_2_1_4 integer, tb_cr_pntb_2_1_5 integer, tb_cr_eptb_3_1_1 integer, tb_cr_eptb_3_1_2 integer, tb_cr_eptb_3_1_3 integer, tb_cr_eptb_3_1_4 integer, tb_cr_eptb_3_1_5 integer, tb_comm_ integer, tb_cbtsr_2_ integer, tb_ci_1_1_1 integer, tb_ci_1_1_2 integer, tb_ci_1_1_3 integer, tb_ci_1_2_1 integer, tb_ci_1_2_2 integer, tb_ci_1_2_3 integer, tb_ci_scr_1_1 integer, tb_ci_scr_1_2 integer, tb_ci_scr_1_3 integer, tb_ci_scr_2_1 integer, tb_ci_scr_2_2 integer, tb_ci_scr_2_3 integer, tb_tpt_1 integer, tb_tpt_2 integer, tb_tpt_3 integer, tb_tpt_1_4_1 integer, tb_tpt_1_4_2 integer, tb_tpt_1_4_3 integer, tb_dst_1_1 integer, tb_dr_nut_1_1 integer, tb_dr_nut_1_2 integer, tb_dr_nut_1_3 integer, leprosy_case_notification__all_leprosy_case_detected integer, leprosy_case_notification__male integer, leprosy_case_notification_female integer, leprosy_case_notification_new_leprosy_cases_detected_ integer, leprosy_case_notification_pb_male_lt_15_yrs integer, leprosy_case_notification_pb_male_gte_15_yrs integer, leprosy_case_notification_pb_female_lt_15_yrs integer, leprosy_case_notification_pb_female_gte_15_yrs integer, leprosy_case_notification_mb__male_lt_15_yrs integer, leprosy_case_notification_mb__male_gte_15_yrs integer, leprosy_case_notification_mb__female_lt__15_yrs integer, leprosy_case_notification_mb__female_gte_15_yrs integer, grade_ii_disability_rate integer, grade_ii_disability_rate_among_new_cases_of_leprosy_male_lt_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_male_gte_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_fem_gt_15 integer, grade_ii_disability_rate_among_new_cases_of_leprosy_fem_gte_15 integer, lep_not__1_1_1 integer, lep_not__1_1_2 integer, lep_not__1_1_3 integer, lep_not__1_1_4 integer, lep_not__1_1_5_1 integer, lep_not__1_1_5_2 integer, lep_not__1_1_5_3 integer, lep_not__1_1_5_4 integer, lep_dis_1_1 integer, lep_dis_1_2 integer, lep_dis_1_3 integer, lep_dis_1_4 integer, lep_tx_2_ integer, lep_tx_3_ integer, lep_tx_4_ integer, lep_tx_5_ integer, xsum integer, ms_opd_numov_1_1 integer, ms_opd_numov_1_2 integer, ms_opd_numov_1_3 integer, ms_opd_numov_1_4 integer, ms_opd_numov_1_5 integer, ms_opd_numov_1_6 integer, ms_opd_numov_1_7 integer, ms_opd_numov_1_8 integer, ms_opd_numov_1_9 integer, ms_opd_numov_1_10 integer, ms_opd_numov_1_11 integer, ms_opd_numov_1_12 integer, ms_opd_numov_1_13 integer, ms_opd_numov_1_14 integer, ms_opd_numov_2 integer, hcsm_eda_tdr integer, pms_avail_1_26_ integer, pms_avail_1_27_ integer, pms_avail_1_28_ integer, pms_avail_1_29_ integer, pms_avail_1_30_ integer, pms_avail_1_31_ integer, pms_avail_1_32_ integer, pms_avail_1_33_ integer, suspected_schistosomiasis_referral integer, suspected_scabies_referral integer, CHIM_ECND_2_1 integer, CHIM_ECND_2_2 integer, CHIM_ECND_2_3 integer, CHIM_ECND_1_1 integer, CHIM_ECND_1_2 integer, CHIM_ECND_1 integer, EPI_VWR_Penta_giv_ integer, NTR_LBW_1_ integer, NTR_LBW_2_ integer, NTR_GMP_1 integer, NTR_GMP_2 integer, NTR_GMP_MM_1 integer, NTR_GMP_MM_2 integer, GMP_SM_1 integer, GMP_SM_2 integer, NUT_VITA_1_1 integer, NUT_VITA_1_2 integer, NUT_VITA_2_1 integer, NUT_VITA_2_2 integer, NUT_DeW_1_1 integer, NUT_DeW_1_2 integer, NUT_DeW_2 integer, NUT_IFA_1_1 integer, NUT_IFA_1_2 integer, NUT_IFA_1_3 integer, PLW_S4AM integer, PLW_S4AM_1 integer, PLW_S4AM_2 integer, NUT_PreSMN_2_1 integer, NUT_PreSMN_2_2 integer, NUT_U5SMN_1_1 integer, NUT_U5SMN_1_2 integer, NUT_U5SMN_1_3 integer, NUT_U5SMN_MAM_1_1 integer, NUT_U5SMN_MAM_1_2 integer, NUT_U5SMN_MAM_1_3 integer, NUT_U5SMN_SAM_1_1 integer, NUT_U5SMN_SAM_1_2 integer, NUT_U5SMN_SAM_1_3 integer, NUT_TX_U5MN_SAM_Beging_SC_1_1 integer, NUT_TX_U5MN_SAM_Beging_SC_1_2 integer, NUT_TX_U5MN_SAM_Beging_SC_1_3 integer, NUT_TX_U5MN_SAM__Adt_SC_2_1 integer, NUT_TX_U5MN_SAM__Adt_SC_2_2 integer, NUT_TX_U5MN_SAM__Adt_SC_2_3 integer, NUT_TX_U5MN_SAM_Stab_SC_3_1 integer, NUT_TX_U5MN_SAM_Stab_SC_3_2 integer, NUT_TX_U5MN_SAM_Stab_SC_3_3 integer, NUT_TX_U5MN_SAM_Cur_SC_4_1 integer, NUT_TX_U5MN_SAM_Cur_SC_4_2 integer, NUT_TX_U5MN_SAM_Cur_SC_4_3 integer, NUT_TX_U5MN_SAM_died_SC_5_1 integer, NUT_TX_U5MN_SAM_died_SC_5_2 integer, NUT_TX_U5MN_SAM_died_SC_5_3 integer, NUT_TX_U5MN_SAM_TO_SC_6_1 integer, NUT_TX_U5MN_SAM_TO_SC_6_2 integer, NUT_TX_U5MN_SAM_TO_SC_6_3 integer, NUT_TX_U5MN_SAM_Def_SC_7_1 integer, NUT_TX_U5MN_SAM_Def_SC_7_2 integer, NUT_TX_U5MN_SAM_Def_SC_7_3 integer, NUT_TX_U5MN_SAM_NR_SC_8_1 integer, NUT_TX_U5MN_SAM_NR_SC_8_2 integer, NUT_TX_U5MN_SAM_NR_SC_8_3 integer, NUT_TX_U5MN_SAM_Ext_SC_9_1 integer, NUT_TX_U5MN_SAM_Ext_SC_9_2 integer, NUT_TX_U5MN_SAM_Ext_SC_9_3 integer, NUT_TX_U5MN_SAM_OTP integer, NUT_TX_U5MN_SAM_Adt_OTP integer, NUT_TX_U5MN_SAM_Cur_OTP_1 integer, NUT_TX_U5MN_SAM_died_OTP_2 integer, NUT_TX_U5MN_SAM_TO_OTP_3 integer, NUT_TX_U5MN_SAM_Def_OTP_4 integer, NUT_TX_U5MN_SAM_NR_OTP_5 integer, NUT_TX_U5MN_SAM_Ext_OTP_E integer, NUT_TX_U5MN__MAM_Beging_OTP integer, NUT_TX_U5MN_MAM_Adt_TSFP integer, NUT_TX_U5MN_SAM_Cur_TSFP_1 integer, NUT_TX_U5MN_SAM_died_TSFP_2 integer, NUT_TX_U5MN_SAM_TO_TSFP_3 integer, NUT_TX_U5MN_SAM_Def_TSFP_4 integer, NUT_TX_U5MN_SAM_NR_TSFP_5 integer, NUT_TX_U5MN__SAM_Ext_TSFP_E integer, NUT_TX_U5MN_MAM_Beging_OTP integer, NUT_TX_U5MN_MAM_Adt_OTP integer, NUT_TX_U5MN_Cur_TSFP_1 integer, NUT_TX_U5MN_died_TSFP_2 integer, NUT_TX_U5MN_TO_TSFP_3 integer, NUT_TX_U5MN__Def_TSFP_4 integer, NUT_TX_U5MN_MAM__NR_TSFP_5 integer, NUT_TX_U5MN_MAM_Ext_TSFP_E integer, NUT_DeW_Numerator integer, NUT_TX_U5MN_SAM_us_OTP_8_ integer, NUT_TX_U5MN_SAM_US_TSFP_8_ integer, HSEH_ES_ALTR integer ,
+   COS_HEP_CMHH integer, COS_MHH_New_1 integer, HEH_HHHWF integer,  HEH_HHHH_ integer,  HEH_HHHH_2_ integer,  HEH_HHHH_3_ integer,  HEPHC_MODEL_H_1_1_ integer,  HEPHC_MODEL_H_1_2_  integer,  HEPHC_MODEL_H_1_3_  integer, HEPHC_H_ integer
 
 ) LANGUAGE plpgsql AS
 $function$
@@ -1162,13 +1162,13 @@ END IF;
 -- ANC_1stV_MA.1.1:ANC:Pregnant women aged 10 to 14 years that received ANC first visit
 ELSIF p_indic_name = 'indic_ANC_1stV_MA_1_1' THEN IF p_record_x.anc1_date IS NOT NULL
 AND p_record_x.anc1_date <> ''
-AND 10 <= ABS((p_record_x.anc1_date::DATE - p_record_x.dob::DATE) / 365.25) <= 14
+AND ABS((p_record_x.anc1_date::DATE - p_record_x.dob::DATE) / 365.25) Between 10 and  14
 THEN ANC_1stV_MA_1_1 := 1;
 END IF;
 -- ANC_1stV_MA.1.2:ANC:Pregnant women aged 15 to 19 years that received ANC first visit
 ELSIF p_indic_name = 'indic_ANC_1stV_MA_1_2' THEN IF p_record_x.anc1_date IS NOT NULL
 AND p_record_x.anc1_date <> ''
-AND 15 <= ABS((p_record_x.anc1_date::DATE - p_record_x.dob::DATE) / 365.25) <= 19
+AND  ABS((p_record_x.anc1_date::DATE - p_record_x.dob::DATE) / 365.25) Between 15 and  19
 THEN ANC_1stV_MA_1_2 := 1;
 END IF;
 -- ANC_1stV_MA.1.3:ANC:Pregnant women above 20 years that received ANC first visit
@@ -1219,81 +1219,81 @@ END IF;
 
 
 -- FP_CAR_Age.1.1:Family Planning:10-14 yr
-ELSIF p_indic_name = 'indic_fp_new_at_10_to_14' THEN IF 10 <= ABS(
+ELSIF p_indic_name = 'indic_fp_new_at_10_to_14' THEN IF ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 14
+) Between 10 and  14
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'new'
 THEN fp_new_at_10_to_14 := 1;
 END IF;
 -- FP_CAR_Age.1.2:Family Planning:15-19 yr
-ELSIF p_indic_name = 'indic_fp_new_at_15_to_19' THEN IF 15 <= ABS(
+ELSIF p_indic_name = 'indic_fp_new_at_15_to_19' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 19
+) Between 15 and  19
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'new'
 THEN fp_new_at_15_to_19 := 1;
 END IF;
 -- FP_CAR_Age.1.3:Family Planning:20 - 24 yr
-ELSIF p_indic_name = 'indic_fp_new_at_20_to_24' THEN IF 20 <= ABS(
+ELSIF p_indic_name = 'indic_fp_new_at_20_to_24' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 24
+) Between 20 and  24
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'new'
 THEN fp_new_at_20_to_24 := 1;
 END IF;
 -- FP_CAR_Age.1.4:Family Planning:25 -29 yr
-ELSIF p_indic_name = 'indic_fp_new_at_25_to_29' THEN IF 25 <= ABS(
+ELSIF p_indic_name = 'indic_fp_new_at_25_to_29' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 29
+) Between 25 and  29
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'new'
 THEN fp_new_at_25_to_29 := 1;
 END IF;
 -- FP_CAR_Age.1.5:Family Planning:30 -49 yr
-ELSIF p_indic_name = 'indic_fp_new_at_30_to_49' THEN IF 30 <= ABS(
+ELSIF p_indic_name = 'indic_fp_new_at_30_to_49' THEN IF ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 49
+) Between 30 and  49
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'new'
 THEN fp_new_at_30_to_49 := 1;
 END IF;
 -- FP_CAR_Age.2.1:Family Planning:10-14 yr
-ELSIF p_indic_name = 'indic_fp_repeat_at_10_to_14' THEN IF 10 <= ABS(
+ELSIF p_indic_name = 'indic_fp_repeat_at_10_to_14' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 14
+) Between 10 and 14
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'repeat'
 THEN fp_repeat_at_10_to_14 := 1;
 END IF;
 -- FP_CAR_Age.2.2:Family Planning:15-19 yr
-ELSIF p_indic_name = 'indic_fp_repeat_at_15_to_19' THEN IF 15 <= ABS(
+ELSIF p_indic_name = 'indic_fp_repeat_at_15_to_19' THEN IF   ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 19
+) Between 15 and  19
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'repeat'
 THEN fp_repeat_at_15_to_19 := 1;
 END IF;
 -- FP_CAR_Age.2.3:Family Planning:20 - 24 yr
-ELSIF p_indic_name = 'indic_fp_repeat_at_20_to_24' THEN IF 20 <= ABS(
+ELSIF p_indic_name = 'indic_fp_repeat_at_20_to_24' THEN IF   ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 24
+) Between 20 and  24
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'repeat'
 THEN fp_repeat_at_20_to_24 := 1;
 END IF;
 -- FP_CAR_Age.2.4:Family Planning:25 -29 yr
-ELSIF p_indic_name = 'indic_fp_repeat_at_25_to_29' THEN IF 25 <= ABS(
+ELSIF p_indic_name = 'indic_fp_repeat_at_25_to_29' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 29
+) Between 25 and  29
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'repeat'
 THEN fp_repeat_at_25_to_29 := 1;
 END IF;
 -- FP_CAR_Age.2.5:Family Planning:30 -49 yr
-ELSIF p_indic_name = 'indic_fp_repeat_at_30_to_49' THEN IF 30 <= ABS(
+ELSIF p_indic_name = 'indic_fp_repeat_at_30_to_49' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 49
+) Between 30 and  49
 AND p_record_x.yearly_report = 'yes'
 AND p_record_x.fp_acceptor_type = 'repeat'
 THEN fp_repeat_at_30_to_49 := 1;
@@ -1339,37 +1339,37 @@ AND p_record_x.fp_acceptor_type = 'repeat'
 AND p_record_x.fp_method = 'iucd' THEN fp_repeat_iucd := 1;
 END IF;
 -- FP_IPPF_Age.1:Family Planning:10-14 yr
-ELSIF p_indic_name = 'indic_fp_at_10_to_14' THEN IF 10 <= ABS(
+ELSIF p_indic_name = 'indic_fp_at_10_to_14' THEN IF ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 14
+) Between 10 and  14
 AND p_record_x.ppfp = 'yes'
 THEN fp_at_10_to_14 := 1;
 END IF;
 -- FP_IPPF_Age.2:Family Planning:15-19 yr
-ELSIF p_indic_name = 'indic_fp_at_15_to_19' THEN IF 15 <= ABS(
+ELSIF p_indic_name = 'indic_fp_at_15_to_19' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 19
+) Between 15 and 19
 AND p_record_x.ppfp = 'yes'
 THEN fp_at_15_to_19 := 1;
 END IF;
 -- FP_IPPF_Age.3:Family Planning:20 - 24 yr
-ELSIF p_indic_name = 'indic_fp_at_20_to_24' THEN IF 20 <= ABS(
+ELSIF p_indic_name = 'indic_fp_at_20_to_24' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 24
+) Between 20 and  24
 AND p_record_x.ppfp = 'yes'
 THEN fp_at_20_to_24 := 1;
 END IF;
 -- FP_IPPF_Age.4:Family Planning:25 -29 yr
-ELSIF p_indic_name = 'indic_fp_at_25_to_29' THEN IF 10 <= ABS(
+ELSIF p_indic_name = 'indic_fp_at_25_to_29' THEN IF ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 14
+)  Between 10 and 14
 AND p_record_x.ppfp = 'yes'
 THEN fp_at_25_to_29 := 1;
 END IF;
 -- FP_IPPF_Age.5:Family Planning:30-49 yr
-ELSIF p_indic_name = 'indic_fp_at_30_to_49' THEN IF 30 <= ABS(
+ELSIF p_indic_name = 'indic_fp_at_30_to_49' THEN IF  ABS(
   (p_record_x.fp_report_date::DATE - p_record_x.dob::DATE) / 365.25
-) <= 49
+)  Between 30 and 49
 AND p_record_x.ppfp = 'yes'
 THEN fp_at_30_to_49 := 1;
 END IF;
@@ -4683,7 +4683,7 @@ AND (
 END IF;
 -- Children 24-59 month who received deworming- :Second dose(NUT_DeW.1.2)
 ELSIF p_indic_name = 'indic_NUT_DeW_1_2' THEN IF
-AND COALESCE(p_record_x.deworming_second_dose_date, '') <> ''
+  COALESCE(p_record_x.deworming_second_dose_date, '') <> ''
 AND COALESCE(p_record_x.deworming_second_dose, '') <> ''
 AND (
     DATE_PART('year', AGE(p_record_x.deworming_second_dose_date::DATE, p_record_x.dob::DATE)) * 12
@@ -5121,7 +5121,7 @@ END IF;
 -- Number of children Age: 6 - 23 Months transferred out- (NUT_TX_U5MN_SAM_TO_SC_6.2)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_2' THEN IF
  p_record_x.closed = TRUE
-AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
+AND p_record_x.newest_sc_treatment_outcome = 'transferred_out' and
     
      (
     DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
@@ -5135,7 +5135,7 @@ END IF;
 -- Number of children Age: 24 - 59 Months transferred out- (NUT_TX_U5MN_SAM_TO_SC_6.3)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_TO_SC_6_3' THEN IF
  p_record_x.closed = TRUE
-AND p_record_x.newest_sc_treatment_outcome = 'transferred_out'
+AND p_record_x.newest_sc_treatment_outcome = 'transferred_out' and 
     
     (
     DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
@@ -5149,7 +5149,7 @@ END IF;
 -- Number of children Age: 0 to 5 Months defaulted-(NUT_TX_U5MN_SAM_Def_SC_7.1)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_1' THEN IF
  p_record_x.closed = TRUE
-AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
+AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted' and
     
          (
     DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
@@ -5163,7 +5163,7 @@ END IF;
 -- Number of children age: 6 - 23 Months defaulted- (NUT_TX_U5MN_SAM_Def_SC_7.2)
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Def_SC_7_2' THEN IF
  p_record_x.closed = TRUE
-AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted'
+AND p_record_x.newest_sc_treatment_outcome = 'client_defaulted' and 
     
      (
     DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
@@ -5276,7 +5276,7 @@ ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_OTP' THEN IF
  p_record_x.closed = FALSE
 AND p_record_x.start_nutrition_status = 'red'
 AND p_record_x.treatment_location = 'Health Post'
-AND p_record_x.treatment_plan = 'OTP Follow-up'
+AND p_record_x.treatment_plan = 'OTP Follow-up' and
     
        (
     DATE_PART('year', AGE(p_record_x.discharged_date_hc::DATE, p_record_x.dob::DATE)) * 12
@@ -5291,7 +5291,7 @@ END IF;
 ELSIF p_indic_name = 'indic_NUT_TX_U5MN_SAM_Adt_OTP' THEN IF
  p_record_x.start_nutrition_status = 'red'
 AND p_record_x.treatment_location = 'Health Post'
-AND p_record_x.treatment_plan = 'OTP Follow-up'
+AND p_record_x.treatment_plan = 'OTP Follow-up' and
     
           (
     DATE_PART('year', AGE(p_record_x.start_nutrition_date::DATE, p_record_x.dob::DATE)) * 12
