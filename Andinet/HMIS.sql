@@ -6828,98 +6828,154 @@ END IF;
 
 
 -- Number of outpatient visits - < 5 Years, Male(MS_OPD_NumOV.1. 1):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_1' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_1:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_1' THEN IF p_record_x.gender = 'male'
+  AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) <5
+ THEN MS_OPD_NumOV_1_1:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - < 5 Years, Female(MS_OPD_NumOV.1. 2):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_2' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_2:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_2' THEN IF p_record_x.gender = 'female' 
+
+ AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) <5
+  THEN MS_OPD_NumOV_1_2:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 5 - 9 years, Male(MS_OPD_NumOV.1. 3):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_3' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_3:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_3' THEN IF p_record_x.gender = 'male' 
+
+ AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 5 and 9
+  
+   THEN MS_OPD_NumOV_1_3:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 5 - 9 years, Female(MS_OPD_NumOV.1. 4):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_4' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_4:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_4' THEN IF p_record_x.gender = 'female'AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 5 and 9
+   THEN MS_OPD_NumOV_1_4:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 11 - 19 years, Male(MS_OPD_NumOV.1. 5):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_5' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_5:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_5' THEN IF p_record_x.gender = 'male' AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 11 and 19
+  THEN MS_OPD_NumOV_1_5:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 11 - 19 years, Female(MS_OPD_NumOV.1. 6):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_6' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_6:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_6' THEN IF p_record_x.gender = 'female' AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 11 and 19 THEN MS_OPD_NumOV_1_6:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 20 - 29 years, Male(MS_OPD_NumOV.1. 7):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_7' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_7:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_7' THEN IF p_record_x.gender = 'male' AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 20 and 29 THEN MS_OPD_NumOV_1_7:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 20 - 29 years, Female(MS_OPD_NumOV.1. 6):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_8' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_8:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_8' THEN IF p_record_x.gender = 'female' AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 20 and 29 THEN MS_OPD_NumOV_1_8:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 30 - 45 years, Male(MS_OPD_NumOV.1. 9):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_9' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_9:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_9' THEN IF p_record_x.gender = 'male' AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 30 and 45 THEN MS_OPD_NumOV_1_9:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 30 - 45 years, Female(MS_OPD_NumOV.1. 10):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_10' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_10:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_10' THEN IF p_record_x.gender = 'female'  AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 30 and 45  THEN MS_OPD_NumOV_1_10:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 46 - 65 years, Male(MS_OPD_NumOV.1. 11):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_11' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_11:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_11' THEN IF p_record_x.gender = 'male'  AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 46 and 65  THEN MS_OPD_NumOV_1_11:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - 46 - 65 years, Female(MS_OPD_NumOV.1. 12):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_12' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_12:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_12' THEN IF p_record_x.gender = 'female'  AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) between 46 and 65  THEN MS_OPD_NumOV_1_12:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - >= 66 Years, Male(MS_OPD_NumOV.1. 13):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_13' THEN IF p_record_x.gender = 'male' THEN MS_OPD_NumOV_1_13:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_13' THEN IF p_record_x.gender = 'male' 
+ AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) >= 66
+ THEN MS_OPD_NumOV_1_13:= 1;
 
 
 END IF;
 
 
 -- Number of outpatient visits - >= 66 Years, Female(MS_OPD_NumOV.1. 14):Medical
-ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_14' THEN IF p_record_x.gender = 'female' THEN MS_OPD_NumOV_1_14:= 1;
+ELSIF p_indic_name = 'indic_MS_OPD_NumOV_1_14' THEN IF p_record_x.gender = 'female' 
+ AND
+       (
+    DATE_PART('year', AGE(p_record_x.visit_date::DATE, p_record_x.dob::DATE))  
+  ) >= 66 THEN MS_OPD_NumOV_1_14:= 1;
 
 
 END IF;
@@ -6940,14 +6996,22 @@ END IF;
 
 
 -- Tracer drug availability - HP_Amoxicillin dispersible tablet(PMS_AVAIL.1.26.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_26_' THEN IF p_record_x.balance = '0' THEN PMS_AVAIL_1_26_:= 1;
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_26_' THEN
+ IF
+  p_record_x.balance = '0'
+and (p_record_x.medication_name = 'Amoxicillin''125mg''Tablet''(Dispersible)' 
+and p_record_x.medication_name = 'Amoxicillin''250mg''Tablet''(Dispersible)')
+  AND COALESCE(p_record_x.dos_date, '') <> ''
+
+ THEN PMS_AVAIL_1_26_:= 1;
 
 
 END IF;
 
 
 -- Tracer drug availability - HP_Oral Rehydration Salts(PMS_AVAIL.1.27.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_27_' THEN IF p_record_x.medication_name = 'Oral''Rehydration''Salt''20.7g''for''1''Littre''Preparation''Powder(ORS)'
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_27_' THEN IF
+ p_record_x.medication_name = 'Oral''Rehydration''Salt''20.7g''for''1''Littre''Preparation''Powder(ORS)'
 AND p_record_x.balance = '0' THEN PMS_AVAIL_1_27_:= 1;
 
 
@@ -6955,7 +7019,8 @@ END IF;
 
 
 -- Tracer drug availability - HP_Zinc dispersible tablet(PMS_AVAIL.1.28.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_28_' THEN IF p_record_x.medication_name = 'Zinc''Acetate''20mg''Tablet''(Scored''&''Dispersable)'
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_28_' THEN 
+IF p_record_x.medication_name = 'Zinc''Acetate''20mg''Tablet''(Scored''&''Dispersable)'
 AND p_record_x.balance = '0' THEN PMS_AVAIL_1_28_:= 1;
 
 
@@ -6963,7 +7028,8 @@ END IF;
 
 
 -- Tracer drug availability - HP_Gentamycin Sulphate injection(PMS_AVAIL.1.29.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_29_' THEN IF p_record_x.medication_name = 'Gentamicin''40mg/ml''in''2ml''Ampoule''Injection'
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_29_' THEN
+ IF p_record_x.medication_name = 'Gentamicin''40mg/ml''in''2ml''Ampoule''Injection'
 AND p_record_x.balance = '0' THEN PMS_AVAIL_1_29_:= 1;
 
 
@@ -6971,7 +7037,8 @@ END IF;
 
 
 -- Tracer drug availability - HP_Medroxyprogesterone Injection(PMS_AVAIL.1.30.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_30_' THEN IF p_record_x.medication_name = 'Medroxyprogesterone''Acetate''150mg/ml''in''1ml''vial''Injection''(Aqueous''suspension)(depoprovera)'
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_30_' THEN 
+IF p_record_x.medication_name = 'Medroxyprogesterone''Acetate''150mg/ml''in''1ml''vial''Injection''(Aqueous''suspension)(depoprovera)'
 AND p_record_x.balance = '0' THEN PMS_AVAIL_1_30_:= 1;
 
 
@@ -6979,7 +7046,16 @@ END IF;
 
 
 -- Tracer drug availability - HP_Arthmeter + Lumfanthrine (Coartem) tablet (any packing)(PMS_AVAIL.1.31.):Medical 
-ELSIF p_indic_name = 'indic_PMS_AVAIL_1_31_' THEN IF p_record_x.balance = '0' THEN PMS_AVAIL_1_31_:= 1;
+ELSIF p_indic_name = 'indic_PMS_AVAIL_1_31_' THEN 
+IF p_record_x.balance = '0' 
+and (
+  p_record_x.medication_name = 'Artemether''+''Lumefanthrine''20mg+120mg''(6x1)''Tablet''(Dispersible)(Coartem''6x1)'
+or p_record_x.medication_name = 'Artemether''+''Lumefanthrine''20mg+120mg''(6x2)''Tablet''(Dispersible)(Coartem''6x2)'
+or p_record_x.medication_name = 'Artemether''+''Lumefanthrine''20mg+120mg''(6x3)''Tablet''(Dispersible)(Coartem''6x3)'
+or p_record_x.medication_name = 'Artemether''+''Lumefanthrine''20mg+120mg''(6x4)''Tablet''(Dispersible)(Coartem''6x4)'
+
+)
+THEN PMS_AVAIL_1_31_:= 1;
 
 
 END IF;
